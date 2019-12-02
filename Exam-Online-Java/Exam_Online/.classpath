@@ -8,5 +8,10 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="D:/DevelopeKit_Java/Tomcat/apache-tomcat-8.5.47-windows-x64/apache-tomcat-8.5.47/lib/servlet-api.jar" sourcepath="D:/DevelopeKit_Java/Jars/javax.servlet-api-3.1.0-sources.jar/javax.servlet-api-3.1.0-sources.jar">
+		<attributes>
+			<attribute name="source_encoding" value="UTF-8"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
