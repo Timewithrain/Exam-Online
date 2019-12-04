@@ -13,5 +13,6 @@
 			<attribute name="source_encoding" value="UTF-8"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="D:/Programs/JAVA/workspace/Exam-Online/Exam-Online-Java/Exam_Online/WebContent/WEB-INF/lib/mysql-connector-java-8.0.18.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
