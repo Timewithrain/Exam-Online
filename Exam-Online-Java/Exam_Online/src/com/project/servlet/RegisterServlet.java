@@ -26,10 +26,10 @@ public class RegisterServlet extends HttpServlet {
 			}else {
 				System.out.println(password);
 				System.out.println(check_pwd);
-				response.getWriter().println("<h3>登陆成功！</h3>");
+				response.getWriter().println("<h3>两次输入密码不一致，请重新注册!</h3>");
 			}
 		}else {
-			response.getWriter().println("<h3>登陆失败，请重新登录！</h3>");
+			response.getWriter().println("<h3>注册失败，请重新注册!</h3>");
 		}
 		projectDAO.close();
 	}
