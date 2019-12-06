@@ -40,4 +40,20 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
   
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>com.project.filter.LoginFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/html/index.html</url-pattern>
+  </filter-mapping>
+  
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/html/makeExam.html</url-pattern>
+  </filter-mapping>
+  
+  
 </web-app>
