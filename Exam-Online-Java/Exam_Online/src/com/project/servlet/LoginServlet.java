@@ -9,21 +9,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.project.DAO.ProjectDAO;
+import com.project.bean.User;
 
 public class LoginServlet extends HttpServlet {
 	public void service(HttpServletRequest request,HttpServletResponse response) throws IOException {
-		request.setCharacterEncoding("utf-8");
-		response.setContentType("text/html;charset=utf-8");
 		ProjectDAO projectDAO = new ProjectDAO();
 		String username = (String)request.getParameter("username");
 		String password = (String)request.getParameter("password");
-		System.out.println(username);
-		System.out.println(password);
 		PrintWriter writer = response.getWriter();
 		if(projectDAO.isUserExists(username)) {
-			writer.println("µÇÂ½³É¹¦£¡");
+			writer.println("ç™»é™†æˆåŠŸï¼");
 		}else {
-			writer.println("µÇÂ½Ê§°Ü£¬ÇëÖØĞÂµÇÂ¼£¡");
+			writer.println("ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯ï¼Œè¯·é‡æ–°ç™»å½•ï¼");
 		}
+		projectDAO.close();
 	}
 }

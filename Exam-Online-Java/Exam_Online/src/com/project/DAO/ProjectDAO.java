@@ -15,7 +15,7 @@ public class ProjectDAO {
 	public ProjectDAO() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/watermelon?serverTimezone=UTC","root","105036");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?serverTimezone=UTC","root","105036");
 			connection.setAutoCommit(false);
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
@@ -43,7 +43,7 @@ public class ProjectDAO {
 	public boolean isUserExists(String name) {
 		boolean isExist = false;
 		int count = 0;
-		String sql = "select count(*) from user where username=?";
+		String sql = "select count(*) from user where username = ?";
 		try {
 			statement = connection.prepareStatement(sql);
 			statement.setString(1, name);
