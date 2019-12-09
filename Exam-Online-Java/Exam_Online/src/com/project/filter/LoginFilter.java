@@ -30,14 +30,6 @@ public class LoginFilter implements Filter{
 		if(username==null) {
 			request.getRequestDispatcher("login.html").forward(request, response);
 		}
-//		//当Session中用户名为空时，用户尚未登录，跳转至login页面
-//		String url = request.getRequestURI();
-//		System.out.println(url);
-//		String quest = url.substring(url.length()-13, url.length());
-//		//当用户请求register页面时，不进行跳转
-//		if(username==null && !quest.equals("register.html")) {
-//			request.getRequestDispatcher("login.html").forward(request, response);
-//		}
 		chain.doFilter(request, response);
 	}
 	

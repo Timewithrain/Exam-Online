@@ -1,24 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <form action="login" method="post">
-        <table>
-            <tr>
-                <td>用户名</td>
-                <td><input type="text" name="username" id=""></td>
-            </tr>
-            <tr>
-                <td>密码</td>
-                <td><input type="password" name="password" id=""></td>
-            </tr>
-            <tr>
-                <td><input type="submit" value="确定"></td>
-            </tr>
-        </table>
-    </form>
-</body>
-</html>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Login</title>  
+    <link rel="stylesheet" type="text/css" href="login.css">  
+</head>  
+<body>  
+    <div id="login">  
+        <h1>Login</h1>
+        <form action="login" method="post">  
+            <input type="text" required="required" placeholder="用户名" name="username"></input>  
+            <input type="password" required="required" placeholder="密码" name="password"></input>  
+            <button class="but" type="submit">登录</button>  
+        </form> 
+        <a href="register.html">还没有账户，点此注册</a> 
+    </div> 
+     
+</body>  
+</html>  
