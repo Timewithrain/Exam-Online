@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="D:\jdk1.8.0_92" version="1.8.0_92">
+<bootpath>
+<entry path="D:\jdk1.8.0_92\jre\lib\resources.jar"/>
+<entry path="D:\jdk1.8.0_92\jre\lib\rt.jar"/>
+<entry path="D:\jdk1.8.0_92\jre\lib\sunrsasign.jar"/>
+<entry path="D:\jdk1.8.0_92\jre\lib\jsse.jar"/>
+<entry path="D:\jdk1.8.0_92\jre\lib\jce.jar"/>
+<entry path="D:\jdk1.8.0_92\jre\lib\charsets.jar"/>
+<entry path="D:\jdk1.8.0_92\jre\lib\jfr.jar"/>
+<entry path="D:\jdk1.8.0_92\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="D:\jdk1.8.0_92\jre\lib\ext"/>
+<entry path="C:\Windows\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="D:\jdk1.8.0_92\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>
