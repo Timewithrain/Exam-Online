@@ -4,26 +4,66 @@
     <meta charset="UTF-8">
     <title>个人信息</title>
     <link rel="stylesheet" href="userinfo.css">
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+    $(function(){
+
+        //需要修改地址
+    // $.ajax({
+
+         //   url:"http://localhost:8080/homework/Order_get",
+        //   data:"info="+info,//接收总金额
+          //   success:function(){},
+          //   dataType:json
+
+        //  })
+//这是测试数据
+//  var info=[
+	//{
+	//	"name":"1",
+	//	"dept":"a",
+		//"grade":1
+		
+	//},
+	//{
+		//"name":"2",
+		//"dept":"b",
+		//"grade":2
+		
+	//}
+//]
+
+
+          $("#info").empty();
+
+          for(var i = 0;i < info.length;i++){
+              var $str = $("<tr></tr>");
+
+              $str.append("<th>"+info[i].name+"</th>");//学号
+              $str.append("<th>"+info[i].dept+"</th>");//学院
+              $str.append("<th>"+info[i].grade+"</th>");//分数
+          
+
+              $str.appendTo("#info");
+          };
+        
+      })
+    </script>
 </head>
 <body>
     <div class="center">
             <h3>您的身份信息</h3>
             <table>
-                <tr>
-                    <th>用户名</th>
-                    <td>**********</td>
-                    <td><a href="#">修改</a></td>
-                </tr>
-                <tr>
-                    <th>学院</th>
-                    <td>***********</td>
-                    <td><a href="#">修改</a></td>
-                </tr>
-                <tr>
-                    <th>学号</th>
-                    <td>***********</td>
-                    <td><a href="#">修改</a></td>
-                </tr>
+            
+            <thead>
+            <th>用户名</th>
+            <th>学院</th>
+            <th>成绩</th>
+            </thead>
+            <tbody  id="info">
+            
+            </tbody>
+            
             </table>
     </div>
 </body>
