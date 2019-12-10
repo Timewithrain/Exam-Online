@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Exam</title>
+		<link rel="stylesheet" href="exam_Sub.css" type="text/css">	
+	</head>
+	<script type="text/javascript">
+ 	var maxtime = 120 * 60; // 
+      	function CountDown() {
+       		if (maxtime >= 0) {
+          		minutes = Math.floor(maxtime / 60);
+          		seconds = Math.floor(maxtime % 60);
+          		msg = "距离考试结束还有" + minutes + "分" + seconds + "秒";
+          		document.all["timer"].innerHTML = msg;
+          		if (maxtime == 5 * 60)alert("距离结束仅剩5分钟");
+            	--maxtime;
+        	} else{
+          		clearInterval(timer);
+          		alert("时间到，结束!");
+        	}
+      }
+      timer = setInterval("CountDown()", 1000);   
+ 	</script>
+</head>
+	<body>
+	    <div id="divFrame">
+    		<div class="exam-herder">
+    			<center> 
+    				<p><font size=+3>考试试卷名字</font></p>
+    			</center>
+    			<center>
+    				出卷人:XXX  分值:100   考试时间:120分钟
+    				<div id="timer"></div>
+ 					<div id="warring"></div>
+    			</center>
+    		</div>
+    		<ol type="1" class="exam-content">
+    			<font size=+2>选择题</font>
+   				<br/>
+    			<hr>
+    			<li>
+    				<div>
+    					<input type="textarea" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
+    	       			<br>
+    	       			<table>
+    	        			<tr>
+    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
+    	        				<td>请选择
+    	        					<select name="SelectType1">
+  										<option value="A" Selected>&nbsp;A&nbsp;</option>
+    									<option value="B">&nbsp;B&nbsp;</option>
+    									<option value="C">&nbsp;C&nbsp;</option>
+    									<option value="D">&nbsp;D&nbsp;</option>
+    								</select>
+    							</td>
+    	        			</tr>
+    	        		</table>
+    	      			<br>
+    				</div>
+    			</li>
+    			<li>
+    				<div>
+    					<input type="textarea" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
+    	       			<br>
+    	       			<table>
+    	        			<tr>
+    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
+    	        				<td>请选择
+    	        					<select name="SelectType1">
+  										<option value="A" Selected>&nbsp;A&nbsp;</option>
+    									<option value="B">&nbsp;B&nbsp;</option>
+    									<option value="C">&nbsp;C&nbsp;</option>
+    									<option value="D">&nbsp;D&nbsp;</option>
+    								</select>
+    							</td>
+    	        			</tr>
+    	        		</table>
+    	      			<br>
+    				</div>
+    			</li>
+    			<li>
+    				<div>
+    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
+    	       			<br>
+    	       			<table>
+    	        			<tr>
+    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
+    	        				<td>请选择
+    	        					<select name="SelectType1">
+  										<option value="A" Selected>&nbsp;A&nbsp;</option>
+    									<option value="B">&nbsp;B&nbsp;</option>
+    									<option value="C">&nbsp;C&nbsp;</option>
+    									<option value="D">&nbsp;D&nbsp;</option>
+    								</select>
+    							</td>
+    	        			</tr>
+    	        		</table>
+    	      			<br>
+    				</div>
+    			</li>
+    			<li>
+    				<div>
+    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
+    	       			<br>
+    	       			<table>
+    	        			<tr>
+    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
+    	        				<td>请选择
+    	        					<select name="SelectType1">
+  										<option value="A" Selected>&nbsp;A&nbsp;</option>
+    									<option value="B">&nbsp;B&nbsp;</option>
+    									<option value="C">&nbsp;C&nbsp;</option>
+    									<option value="D">&nbsp;D&nbsp;</option>
+    								</select>
+    							</td>
+    	        			</tr>
+    	        		</table>
+    	      			<br>
+    				</div>
+    			</li>
+    			<li>
+    				<div>
+    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
+    	       			<br>
+    	       			<table>
+    	        			<tr>
+    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
+    	        				<td>请选择
+    	        					<select name="SelectType1">
+  										<option value="A" Selected>&nbsp;A&nbsp;</option>
+    									<option value="B">&nbsp;B&nbsp;</option>
+    									<option value="C">&nbsp;C&nbsp;</option>
+    									<option value="D">&nbsp;D&nbsp;</option>
+    								</select>
+    							</td>
+    	        			</tr>
+    	        		</table>
+    	      			<br>
+    				</div>
+    			</li>
+    			<li>
+    				<div>
+    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
+    	       			<br>
+    	       			<table>
+    	        			<tr>
+    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
+    	        				<td>请选择
+    	        					<select name="SelectType1">
+  										<option value="A" Selected>&nbsp;A&nbsp;</option>
+    									<option value="B">&nbsp;B&nbsp;</option>
+    									<option value="C">&nbsp;C&nbsp;</option>
+    									<option value="D">&nbsp;D&nbsp;</option>
+    								</select>
+    							</td>
+    	        			</tr>
+    	        		</table>
+    	      			<br>
+    				</div>
+    			</li>
+    			<li>
+    				<div>
+    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
+    	       			<br>
+    	       			<table>
+    	        			<tr>
+    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
+    	        				<td>请选择
+    	        					<select name="SelectType1">
+  										<option value="A" Selected>&nbsp;A&nbsp;</option>
+    									<option value="B">&nbsp;B&nbsp;</option>
+    									<option value="C">&nbsp;C&nbsp;</option>
+    									<option value="D">&nbsp;D&nbsp;</option>
+    								</select>
+    							</td>
+    	        			</tr>
+    	        		</table>
+    	      			<br>
+    				</div>
+    			</li>
+    			<li>
+    				<div>
+    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
+    	       			<br>
+    	       			<table>
+    	        			<tr>
+    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
+    	        				<td>请选择
+    	        					<select name="SelectType1">
+  										<option value="A" Selected>&nbsp;A&nbsp;</option>
+    									<option value="B">&nbsp;B&nbsp;</option>
+    									<option value="C">&nbsp;C&nbsp;</option>
+    									<option value="D">&nbsp;D&nbsp;</option>
+    								</select>
+    							</td>
+    	        			</tr>
+    	        		</table>
+    	      			<br>
+    				</div>
+    			</li>
+    			<li>
+    				<div>
+    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
+    	       			<br>
+    	       			<table>
+    	        			<tr>
+    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
+    	        				<td>请选择
+    	        					<select name="SelectType1">
+  										<option value="A" Selected>&nbsp;A&nbsp;</option>
+    									<option value="B">&nbsp;B&nbsp;</option>
+    									<option value="C">&nbsp;C&nbsp;</option>
+    									<option value="D">&nbsp;D&nbsp;</option>
+    								</select>
+    							</td>
+    	        			</tr>
+    	        		</table>
+    	      			<br>
+    				</div>
+    			</li>
+    			<li>
+    				<div>
+    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
+    	       			<br>
+    	       			<table>
+    	        			<tr>
+    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
+    	        				<td>请选择
+    	        					<select name="SelectType1">
+  										<option value="A" Selected>&nbsp;A&nbsp;</option>
+    									<option value="B">&nbsp;B&nbsp;</option>
+    									<option value="C">&nbsp;C&nbsp;</option>
+    									<option value="D">&nbsp;D&nbsp;</option>
+    								</select>
+    							</td>
+    	        			</tr>
+    	        		</table>
+    	      			<br>
+    				</div>
+    			</li>
+    			<li>
+    				<div>
+    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
+    	       			<br>
+    	       			<table>
+    	        			<tr>
+    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
+    	        				<td>请选择
+    	        					<select name="SelectType1">
+  										<option value="A" Selected>&nbsp;A&nbsp;</option>
+    									<option value="B">&nbsp;B&nbsp;</option>
+    									<option value="C">&nbsp;C&nbsp;</option>
+    									<option value="D">&nbsp;D&nbsp;</option>
+    								</select>
+    							</td>
+    	        			</tr>
+    	        		</table>
+    	      			<br>
+    				</div>
+    			</li>
+    			<li>
+    				<div>
+    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
+    	       			<br>
+    	       			<table>
+    	        			<tr>
+    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
+    	        				<td>请选择
+    	        					<select name="SelectType1">
+  										<option value="A" Selected>&nbsp;A&nbsp;</option>
+    									<option value="B">&nbsp;B&nbsp;</option>
+    									<option value="C">&nbsp;C&nbsp;</option>
+    									<option value="D">&nbsp;D&nbsp;</option>
+    								</select>
+    							</td>
+    	        			</tr>
+    	        		</table>
+    	      			<br>
+    				</div>
+    			</li>
+    	
+    
+    
+    		<br>
+    		<font size=+2>判断题</font>
+    		<br/>
+    		<hr>
+    
+    
+    	
+    		<li>
+    			<div>
+    				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
+    				<br>
+	    			<table>
+    					<tr>
+    						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    						<td>
+    							<select name="SelectType1">
+    								<option value="1" Selected>&nbsp;对&nbsp;</option>
+    								<option value="0">&nbsp;错&nbsp;</option>
+    							</select>
+	    					</td>
+    					</tr>
+    				</table>
+    				<br>
+	    		</div>
+    		</li>
+    		<li>
+	    		<div>
+    				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
+    				<br>
+    				<table>
+    					<tr>
+    						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    						<td>
+	    						<select name="SelectType1">
+    								<option value="1" Selected>&nbsp;对&nbsp;</option>
+    								<option value="0">&nbsp;错&nbsp;</option>
+    							</select>
+    						</td>
+    					</tr>
+	    			</table>
+    				<br>
+    			</div>
+	    	</li>
+    	    	
+    		<li>
+    			<div>
+    				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
+    				<br>
+	    			<table>
+    					<tr>
+    						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    						<td>
+    							<select name="SelectType1">
+    								<option value="1" Selected>&nbsp;对&nbsp;</option>
+    								<option value="0">&nbsp;错&nbsp;</option>
+    							</select>
+	    					</td>
+    					</tr>
+    				</table>
+    				<br>
+	    		</div>
+    		</li>
+    		<li>
+	    		<div>
+    				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
+    				<br>
+    				<table>
+    					<tr>
+    						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    						<td>
+	    						<select name="SelectType1">
+    								<option value="1" Selected>&nbsp;对&nbsp;</option>
+    								<option value="0">&nbsp;错&nbsp;</option>
+    							</select>
+    						</td>
+    					</tr>
+	    			</table>
+    				<br>
+    			</div>
+	    	</li>    	
+    		<li>
+    			<div>
+    				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
+    				<br>
+	    			<table>
+    					<tr>
+    						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    						<td>
+    							<select name="SelectType1">
+    								<option value="1" Selected>&nbsp;对&nbsp;</option>
+    								<option value="0">&nbsp;错&nbsp;</option>
+    							</select>
+	    					</td>
+    					</tr>
+    				</table>
+    				<br>
+	    		</div>
+    		</li>
+    		<li>
+	    		<div>
+    				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
+    				<br>
+    				<table>
+    					<tr>
+    						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    						<td>
+	    						<select name="SelectType1">
+    								<option value="1" Selected>&nbsp;对&nbsp;</option>
+    								<option value="0">&nbsp;错&nbsp;</option>
+    							</select>
+    						</td>
+    					</tr>
+	    			</table>
+    				<br>
+    			</div>
+	    	</li>    	
+    		<li>
+    			<div>
+    				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
+    				<br>
+	    			<table>
+    					<tr>
+    						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    						<td>
+    							<select name="SelectType1">
+    								<option value="1" Selected>&nbsp;对&nbsp;</option>
+    								<option value="0">&nbsp;错&nbsp;</option>
+    							</select>
+	    					</td>
+    					</tr>
+    				</table>
+    				<br>
+	    		</div>
+    		</li>
+    		<li>
+	    		<div>
+    				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
+    				<br>
+    				<table>
+    					<tr>
+    						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    						<td>
+	    						<select name="SelectType1">
+    								<option value="1" Selected>&nbsp;对&nbsp;</option>
+    								<option value="0">&nbsp;错&nbsp;</option>
+    							</select>
+    						</td>
+    					</tr>
+	    			</table>
+    				<br>
+    			</div>
+	    	</li>
+    
+    		<br><font size=+2>多选题</font><br/>
+	    	<hr>
+    		<li>
+    			<table>
+    				<tr>   				
+    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
+	    			</tr>	
+    				<tr>
+    					<div>				
+	    					<input type="checkbox" name="chkVal" value="A">A
+    						<input type="checkbox" name="chkVal" value="B">B
+    						<input type="checkbox" name="chkVal" value="C">C
+    						<input type="checkbox" name="chkVal" value="D">D
+    						<input type="checkbox" name="chkVal" value="E">E	
+    					</div>
+	    			</tr>
+    			</table>
+    		</li>
+    		<li>
+    			<table>
+    				<tr>   				
+    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
+	    			</tr>	
+    				<tr>
+    					<div>				
+	    					<input type="checkbox" name="chkVal" value="A">A
+    						<input type="checkbox" name="chkVal" value="B">B
+    						<input type="checkbox" name="chkVal" value="C">C
+    						<input type="checkbox" name="chkVal" value="D">D
+    						<input type="checkbox" name="chkVal" value="E">E	
+    					</div>
+	    			</tr>
+    			</table>
+    		</li>
+    		<li>
+    			<table>
+    				<tr>   				
+    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
+	    			</tr>	
+    				<tr>
+    					<div>				
+	    					<input type="checkbox" name="chkVal" value="A">A
+    						<input type="checkbox" name="chkVal" value="B">B
+    						<input type="checkbox" name="chkVal" value="C">C
+    						<input type="checkbox" name="chkVal" value="D">D
+    						<input type="checkbox" name="chkVal" value="E">E	
+    					</div>
+	    			</tr>
+    			</table>
+    		</li>
+    		<li>
+    			<table>
+    				<tr>   				
+    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
+	    			</tr>	
+    				<tr>
+    					<div>				
+	    					<input type="checkbox" name="chkVal" value="A">A
+    						<input type="checkbox" name="chkVal" value="B">B
+    						<input type="checkbox" name="chkVal" value="C">C
+    						<input type="checkbox" name="chkVal" value="D">D
+    						<input type="checkbox" name="chkVal" value="E">E	
+    					</div>
+	    			</tr>
+    			</table>
+    		</li>
+    		<li>
+    			<table>
+    				<tr>   				
+    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
+	    			</tr>	
+    				<tr>
+    					<div>				
+	    					<input type="checkbox" name="chkVal" value="A">A
+    						<input type="checkbox" name="chkVal" value="B">B
+    						<input type="checkbox" name="chkVal" value="C">C
+    						<input type="checkbox" name="chkVal" value="D">D
+    						<input type="checkbox" name="chkVal" value="E">E	
+    					</div>
+	    			</tr>
+    			</table>
+    		</li>
+    		<li>
+    			<table>
+    				<tr>   				
+    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
+	    			</tr>	
+    				<tr>
+    					<div>				
+	    					<input type="checkbox" name="chkVal" value="A">A
+    						<input type="checkbox" name="chkVal" value="B">B
+    						<input type="checkbox" name="chkVal" value="C">C
+    						<input type="checkbox" name="chkVal" value="D">D
+    						<input type="checkbox" name="chkVal" value="E">E	
+    					</div>
+	    			</tr>
+    			</table>
+    		</li>
+    		<li>
+    			<table>
+    				<tr>   				
+    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
+	    			</tr>	
+    				<tr>
+    					<div>				
+	    					<input type="checkbox" name="chkVal" value="A">A
+    						<input type="checkbox" name="chkVal" value="B">B
+    						<input type="checkbox" name="chkVal" value="C">C
+    						<input type="checkbox" name="chkVal" value="D">D
+    						<input type="checkbox" name="chkVal" value="E">E	
+    					</div>
+	    			</tr>
+    			</table>
+    		</li>
+    		<li>
+    			<table>
+    				<tr>   				
+    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
+	    			</tr>	
+    				<tr>
+    					<div>				
+	    					<input type="checkbox" name="chkVal" value="A">A
+    						<input type="checkbox" name="chkVal" value="B">B
+    						<input type="checkbox" name="chkVal" value="C">C
+    						<input type="checkbox" name="chkVal" value="D">D
+    						<input type="checkbox" name="chkVal" value="E">E	
+    					</div>
+	    			</tr>
+    			</table>
+    		</li>        
+    	</ol>
+    	<hr>
+    	<center>
+    		<table>
+    			<tr>
+    				<td>&nbsp;&nbsp;&nbsp;</td>
+    				<td>&nbsp;&nbsp;&nbsp;</td>
+    				<td><button type="button" class="ant-btn">提交答卷</button></td>
+    				<td><font size＝ －1>**请务必答完全部题目,再提交试卷</font></td>
+    			</tr>
+    		</table>
+    	</center>
+    	<hr>
+    	<div id="myDiv"></div>
+    	</div>
+	</body>
+</html>

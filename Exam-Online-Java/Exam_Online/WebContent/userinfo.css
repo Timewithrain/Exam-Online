@@ -1,0 +1,22 @@
+table{
+	border: 1px solid rgb(216, 208, 208);
+	width: 40%;
+    border-collapse:collapse ;
+    margin-left: 30%;
+    
+}
+td{
+	border: 1px solid rgb(216, 208, 208);
+	text-align: center;
+	height: 50px;
+}
+th{
+    height: 35px;
+    border: 1px solid rgb(216, 208, 208);
+}
+.center{
+    text-align: center;
+}
+a{
+	text-decoration: none;
+}
