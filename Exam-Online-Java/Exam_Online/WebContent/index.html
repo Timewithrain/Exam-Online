@@ -34,7 +34,7 @@
             <td>1</td>
             <td>试卷A</td>
             <td>JAVA</td>
-            <td><a href="makeExam.html">开始考试</a> </td>
+            <td><a href="makeExama.html" class="startExam" name="a" onclick="getNum()">开始考试</a> </td>
         </tr>
         <tr>
             <td>2</td>
@@ -52,4 +52,15 @@
       
     </table>
 </body>
+<script src="jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		function getNum(ev){
+			var ev = ev ? ev:event; 
+			var obj = ev.srcElement ? ev.srcElement : ev.target; 
+			var num = obj.name;
+			//ajax
+		}
+	});
+</script>
 </html>
