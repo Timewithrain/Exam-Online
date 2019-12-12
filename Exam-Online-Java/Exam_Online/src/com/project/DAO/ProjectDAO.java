@@ -5,7 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
+import com.project.bean.Paper;
+import com.project.bean.Topic;
 import com.project.bean.User;
 
 public class ProjectDAO {
@@ -75,6 +78,34 @@ public class ProjectDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public Paper getPaper(String a) {
+		String sql = "select * from ?";
+		ArrayList<Topic> topics = new ArrayList<Topic>();
+		try {
+			statement = connection.prepareStatement(sql);
+			statement.setString(1 , a);
+			ResultSet rs = statement.executeQuery();
+			while(rs.next()) {
+				int num = rs.getInt("num");
+				String topic = rs.getString("timu");
+				ArrayList<String> answers = new ArrayList<String>();
+				answers.add(rs.getString("A"));
+				answers.add(rs.getString("B"));
+				answers.add(rs.getString("C"));
+				answers.add(rs.getString("D"));
+				String rightAnswer = rs.getString("right");
+				int grade = rs.getInt("grade");
+				Topic t = new Topic(num+"",topic,answers,rightAnswer,grade);
+				topics.add(t);
+			}
+			connection.commit();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return new Paper(a,topics);
 	}
 	
 	
