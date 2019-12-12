@@ -1,0 +1,310 @@
+#mydiv{
+	width: 100%;
+	margin: 0;/*去除标签默认的8像素*/
+	padding: 0;
+	background-color: #f4f4f4;
+	position: absolute;
+}
+
+#divFrame
+{
+	margin-left:10%;
+	margin-right:10%;
+	height:100%;
+	background-color: #FFFFFF;
+	/*border: 1px solid black;*/
+}
+
+
+.exam-herder
+{
+	padding-top: 10px;
+	height: 145px;
+	/*border: 1px solid red;*/
+	background-color:#FFFFFF;
+	background-image: url(../img/test_top.jpg);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+}
+
+.exam-content
+{
+	margin-top: 10px;
+	margin-left: 0PX;
+	background-color:#FFFFFF;
+}
+
+
+.title
+{
+	font-size: 1.1em;
+	
+}
+
+label
+{
+    font-size: 18px;
+}
+
+/* 把单选框隐藏 */      
+label input[type="radio"] 
+{
+    display: none;
+}
+
+/* 自定义单选框初始样式 */
+label .radio 
+{
+	display: inline-block;
+	position: relative;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	border: 2px solid #777;
+    vertical-align: -4px;
+}
+
+/* 自定义单选框选中样式 初始隐藏*/
+label .radio::after 
+{
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #299;
+    border-radius: 50%;
+    display: none;
+}
+
+/* 显示自定义单选框 */
+label input[type="radio"]:checked+.radio::after 
+{
+    display: block;
+}
+
+/* 切换自定义单选框border颜色 */
+label input[type="radio"]:checked+.radio 
+{
+    border-color: #299;
+}
+
+/* 选中时，文本加颜色 */
+label input[type="radio"]:checked~.item 
+{
+    color: #199;
+}
+
+
+ label {
+            font-size: 18px;
+            margin: 0 10px;
+        }
+
+/* 把多选框隐藏 */
+label input[type="checkbox"] 
+{
+    display: none;
+}
+
+/* 自定义多选框初始样式 */
+label .checkbox 
+{
+    display: inline-block;
+    margin-right: 2px;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    vertical-align: -4px;
+}
+
+/* 自定义多选框选中样式 初始隐藏*/
+label .checkbox::after 
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    background-color: #299;
+    display: none;
+}
+label .checkbox i 
+{
+    font-weight: bolder;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #fff;
+    font-size: 14px;
+}
+/* 显示自定义多选框 */
+label input[type="checkbox"]:checked+.checkbox::after 
+{
+    display: block;
+}
+
+/* 切换自定义多选框border颜色 */
+label input[type="checkbox"]:checked+.checkbox 
+{
+    border-color: #299;
+}
+
+/* 选中时，文本加颜色 */
+label input[type="checkbox"]:checked~.item 
+{
+    color: #199;
+}
+
+/*按钮*/
+.ant-btn 
+{
+    line-height: 1.499;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.015);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.015);
+    cursor: pointer;
+    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    height: 32px;
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: rgba(0,0,0,0.65);
+    background-color: #fff;
+    border-color: #d9d9d9;
+    color: #fff;
+    background-color: #FF5A44;
+    border-color: #FF5A44;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.045);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.045);
+}
+
+
+/*弹窗*/
+.a{
+	position: fixed; 
+	left: 50%; 
+	top: -100%; 
+	background-color: #dbe0e9; 
+	/*z-index: 2147000001;*/ 
+	width: 570px; 
+	height: 300px; 
+	margin-left: -285px;
+	margin-top: -150px; 
+	border-radius: 5px; 
+	font-weight: bold; 
+	color: #535e66;
+	/*border: 1px solid black;*/
+	/* z-index: 0; */
+}
+
+.a-header
+{
+    height: 30px; 
+	line-height: 30px; 
+	padding: 14px 30px; 
+	border-bottom: solid 1px #eef0f1;
+}
+.a-header div{
+	font-size: 18px; 
+	display: block; 
+	float: left; 
+	height: 30px; 
+	position: relative; 
+}
+.a-header span{
+	display: block; 
+	cursor: pointer; 
+	width: 12px; 
+	height: 12px; 
+	position: absolute; 
+	top: 22px; 
+	right: 30px; 
+	background: url(../img/icons.png) -48px -96px no-repeat;
+}
+
+.a-center{
+	margin: 40px 100px; 
+	height: 100px; 
+	overflow: hidden;
+}
+.bigIcon{
+	float: left; 
+	margin-right: 25px; 
+	width: 48px; 
+	height: 48px; 
+	background-image: url(../img/icons.png); 
+	background-repeat: no-repeat; 
+    /* border: 1px solid black; */
+}
+.icon1{
+    background-position: -48px 0;
+}
+.icon2{
+    background-position: 0 -48px;
+}
+
+.a-center p{ 
+	height: 84px; 
+	margin-top: 16px; 
+	line-height: 26px; 
+	overflow-x: hidden; 
+    overflow-y: auto;
+}
+
+.a-footer{
+    border-top: solid 1px #eef0f1;
+}
+.btnGroup{
+	float: right;
+}
+.sgbtn{
+	margin-top: 14px; 
+	margin-right: 125px;
+    display: block; 
+	cursor: pointer; 
+	float: left; 
+	width: 95px; 
+	height: 35px; 
+	line-height: 35px; 
+	text-align: center; 
+	color: #FFFFFF; 
+	border-radius: 5px;
+}
+.ok1{
+	background-color: #0095d9; 
+}
+.ok2{
+	background-color: #0095d9; 
+}
+.cancel{
+	background-color: #546a79; 
+}
