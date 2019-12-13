@@ -2,29 +2,16 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Exam</title>
-		<link rel="stylesheet" href="exam_Sub.css" type="text/css">	
+		<title></title>
 	</head>
-	<script type="text/javascript">
- 	var maxtime = 120 * 60; // 
-      	function CountDown() {
-       		if (maxtime >= 0) {
-          		minutes = Math.floor(maxtime / 60);
-          		seconds = Math.floor(maxtime % 60);
-          		msg = "距离考试结束还有" + minutes + "分" + seconds + "秒";
-          		document.all["timer"].innerHTML = msg;
-          		if (maxtime == 5 * 60)alert("距离结束仅剩5分钟");
-            	--maxtime;
-        	} else{
-          		clearInterval(timer);
-          		alert("时间到，结束!");
-        	}
-      }
-      timer = setInterval("CountDown()", 1000);   
- 	</script>
-</head>
+	
+	<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/count-down.js" type="text/javascript" charset="utf-8"></script>
+ 	<link rel="stylesheet" href="css/exam_Sub.css" type="text/css"></link>
+ 	
 	<body>
-	    <div id="divFrame">
+	   <div id="mydiv">
+	   	 <div id="divFrame">
     		<div class="exam-herder">
     			<center> 
     				<p><font size=+3>考试试卷名字</font></p>
@@ -40,274 +27,588 @@
    				<br/>
     			<hr>
     			<li>
-    				<div>
-    					<input type="textarea" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
-    	       			<br>
-    	       			<table>
-    	        			<tr>
-    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
-    	        				<td>请选择
-    	        					<select name="SelectType1">
-  										<option value="A" Selected>&nbsp;A&nbsp;</option>
-    									<option value="B">&nbsp;B&nbsp;</option>
-    									<option value="C">&nbsp;C&nbsp;</option>
-    									<option value="D">&nbsp;D&nbsp;</option>
-    								</select>
-    							</td>
-    	        			</tr>
-    	        		</table>
-    	      			<br>
-    				</div>
+    				<form action="" method="get">
+    					<p class="title">这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="A" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">A.这里是a选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="B" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">B.这里是b选项内容呀</span>
+    					</label><br />
+    					<label>
+        						<input type="radio" name="ques1" value="C" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">C.这里是c选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="D" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">D.这里是d选项内容呀</span>
+    					</label><br />
+						<!--<p class="title">这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+						<br>
+						<div class="option"><input type="radio" name="ques1" value="A" class="Op-button"><p class="Op-content">A.这里是a选项内容呀</p></div>
+						<input type="radio" name="ques1" value="B" class="Op-button"><p>B.这里是b选项内容呀</p><br>
+						<input type="radio" name="ques1" value="C" class="Op-button"><p>C.这里是c选项内容呀</p><br>
+						<input type="radio" name="ques1" value="D" class="Op-button"><p>D.这里是d选项内容呀</p><br>
+						<br>-->
+					</form>
     			</li>
     			<li>
-    				<div>
-    					<input type="textarea" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
-    	       			<br>
-    	       			<table>
-    	        			<tr>
-    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
-    	        				<td>请选择
-    	        					<select name="SelectType1">
-  										<option value="A" Selected>&nbsp;A&nbsp;</option>
-    									<option value="B">&nbsp;B&nbsp;</option>
-    									<option value="C">&nbsp;C&nbsp;</option>
-    									<option value="D">&nbsp;D&nbsp;</option>
-    								</select>
-    							</td>
-    	        			</tr>
-    	        		</table>
-    	      			<br>
-    				</div>
+    				<form action="" method="get">
+    					<p class="title">这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="A" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">A.这里是a选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="B" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">B.这里是b选项内容呀</span>
+    					</label><br />
+    					<label>
+        						<input type="radio" name="ques1" value="C" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">C.这里是c选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="D" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">D.这里是d选项内容呀</span>
+    					</label><br />
+					</form>
     			</li>
     			<li>
-    				<div>
-    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
-    	       			<br>
-    	       			<table>
-    	        			<tr>
-    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
-    	        				<td>请选择
-    	        					<select name="SelectType1">
-  										<option value="A" Selected>&nbsp;A&nbsp;</option>
-    									<option value="B">&nbsp;B&nbsp;</option>
-    									<option value="C">&nbsp;C&nbsp;</option>
-    									<option value="D">&nbsp;D&nbsp;</option>
-    								</select>
-    							</td>
-    	        			</tr>
-    	        		</table>
-    	      			<br>
-    				</div>
+    				<form action="" method="get">
+    					<p class="title">这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="A" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">A.这里是a选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="B" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">B.这里是b选项内容呀</span>
+    					</label><br />
+    					<label>
+        						<input type="radio" name="ques1" value="C" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">C.这里是c选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="D" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">D.这里是d选项内容呀</span>
+    					</label><br />
+					</form>
     			</li>
     			<li>
-    				<div>
-    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
-    	       			<br>
-    	       			<table>
-    	        			<tr>
-    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
-    	        				<td>请选择
-    	        					<select name="SelectType1">
-  										<option value="A" Selected>&nbsp;A&nbsp;</option>
-    									<option value="B">&nbsp;B&nbsp;</option>
-    									<option value="C">&nbsp;C&nbsp;</option>
-    									<option value="D">&nbsp;D&nbsp;</option>
-    								</select>
-    							</td>
-    	        			</tr>
-    	        		</table>
-    	      			<br>
-    				</div>
+    				<form action="" method="get">
+    					<p class="title">这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="A" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">A.这里是a选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="B" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">B.这里是b选项内容呀</span>
+    					</label><br />
+    					<label>
+        						<input type="radio" name="ques1" value="C" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">C.这里是c选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="D" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">D.这里是d选项内容呀</span>
+    					</label><br />
+					</form>
     			</li>
     			<li>
-    				<div>
-    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
-    	       			<br>
-    	       			<table>
-    	        			<tr>
-    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
-    	        				<td>请选择
-    	        					<select name="SelectType1">
-  										<option value="A" Selected>&nbsp;A&nbsp;</option>
-    									<option value="B">&nbsp;B&nbsp;</option>
-    									<option value="C">&nbsp;C&nbsp;</option>
-    									<option value="D">&nbsp;D&nbsp;</option>
-    								</select>
-    							</td>
-    	        			</tr>
-    	        		</table>
-    	      			<br>
-    				</div>
+    				<form action="" method="get">
+    					<p class="title">这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="A" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">A.这里是a选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="B" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">B.这里是b选项内容呀</span>
+    					</label><br />
+    					<label>
+        						<input type="radio" name="ques1" value="C" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">C.这里是c选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="D" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">D.这里是d选项内容呀</span>
+    					</label><br />
+					</form>
     			</li>
     			<li>
-    				<div>
-    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
-    	       			<br>
-    	       			<table>
-    	        			<tr>
-    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
-    	        				<td>请选择
-    	        					<select name="SelectType1">
-  										<option value="A" Selected>&nbsp;A&nbsp;</option>
-    									<option value="B">&nbsp;B&nbsp;</option>
-    									<option value="C">&nbsp;C&nbsp;</option>
-    									<option value="D">&nbsp;D&nbsp;</option>
-    								</select>
-    							</td>
-    	        			</tr>
-    	        		</table>
-    	      			<br>
-    				</div>
+    				<form action="" method="get">
+    					<p class="title">这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="A" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">A.这里是a选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="B" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">B.这里是b选项内容呀</span>
+    					</label><br />
+    					<label>
+        						<input type="radio" name="ques1" value="C" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">C.这里是c选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="D" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">D.这里是d选项内容呀</span>
+    					</label><br />
+					</form>
     			</li>
     			<li>
-    				<div>
-    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
-    	       			<br>
-    	       			<table>
-    	        			<tr>
-    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
-    	        				<td>请选择
-    	        					<select name="SelectType1">
-  										<option value="A" Selected>&nbsp;A&nbsp;</option>
-    									<option value="B">&nbsp;B&nbsp;</option>
-    									<option value="C">&nbsp;C&nbsp;</option>
-    									<option value="D">&nbsp;D&nbsp;</option>
-    								</select>
-    							</td>
-    	        			</tr>
-    	        		</table>
-    	      			<br>
-    				</div>
+    				<form action="" method="get">
+    					<p class="title">这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="A" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">A.这里是a选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="B" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">B.这里是b选项内容呀</span>
+    					</label><br />
+    					<label>
+        						<input type="radio" name="ques1" value="C" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">C.这里是c选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="D" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">D.这里是d选项内容呀</span>
+    					</label><br />
+					</form>
     			</li>
     			<li>
-    				<div>
-    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
-    	       			<br>
-    	       			<table>
-    	        			<tr>
-    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
-    	        				<td>请选择
-    	        					<select name="SelectType1">
-  										<option value="A" Selected>&nbsp;A&nbsp;</option>
-    									<option value="B">&nbsp;B&nbsp;</option>
-    									<option value="C">&nbsp;C&nbsp;</option>
-    									<option value="D">&nbsp;D&nbsp;</option>
-    								</select>
-    							</td>
-    	        			</tr>
-    	        		</table>
-    	      			<br>
-    				</div>
+    				<form action="" method="get">
+    					<p class="title">这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="A" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">A.这里是a选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="B" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">B.这里是b选项内容呀</span>
+    					</label><br />
+    					<label>
+        						<input type="radio" name="ques1" value="C" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">C.这里是c选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="D" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">D.这里是d选项内容呀</span>
+    					</label><br />
+					</form>
     			</li>
     			<li>
-    				<div>
-    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
-    	       			<br>
-    	       			<table>
-    	        			<tr>
-    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
-    	        				<td>请选择
-    	        					<select name="SelectType1">
-  										<option value="A" Selected>&nbsp;A&nbsp;</option>
-    									<option value="B">&nbsp;B&nbsp;</option>
-    									<option value="C">&nbsp;C&nbsp;</option>
-    									<option value="D">&nbsp;D&nbsp;</option>
-    								</select>
-    							</td>
-    	        			</tr>
-    	        		</table>
-    	      			<br>
-    				</div>
+    				<form action="" method="get">
+    					<p class="title">这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="A" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">A.这里是a选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="B" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">B.这里是b选项内容呀</span>
+    					</label><br />
+    					<label>
+        						<input type="radio" name="ques1" value="C" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">C.这里是c选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="D" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">D.这里是d选项内容呀</span>
+    					</label><br />
+					</form>
     			</li>
     			<li>
-    				<div>
-    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
-    	       			<br>
-    	       			<table>
-    	        			<tr>
-    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
-    	        				<td>请选择
-    	        					<select name="SelectType1">
-  										<option value="A" Selected>&nbsp;A&nbsp;</option>
-    									<option value="B">&nbsp;B&nbsp;</option>
-    									<option value="C">&nbsp;C&nbsp;</option>
-    									<option value="D">&nbsp;D&nbsp;</option>
-    								</select>
-    							</td>
-    	        			</tr>
-    	        		</table>
-    	      			<br>
-    				</div>
+    				<form action="" method="get">
+    					<p class="title">这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="A" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">A.这里是a选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="B" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">B.这里是b选项内容呀</span>
+    					</label><br />
+    					<label>
+        						<input type="radio" name="ques1" value="C" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">C.这里是c选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="D" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">D.这里是d选项内容呀</span>
+    					</label><br />
+					</form>
     			</li>
     			<li>
-    				<div>
-    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
-    	       			<br>
-    	       			<table>
-    	        			<tr>
-    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
-    	        				<td>请选择
-    	        					<select name="SelectType1">
-  										<option value="A" Selected>&nbsp;A&nbsp;</option>
-    									<option value="B">&nbsp;B&nbsp;</option>
-    									<option value="C">&nbsp;C&nbsp;</option>
-    									<option value="D">&nbsp;D&nbsp;</option>
-    								</select>
-    							</td>
-    	        			</tr>
-    	        		</table>
-    	      			<br>
-    				</div>
+    				<form action="" method="get">
+    					<p class="title">这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="A" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">A.这里是a选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="B" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">B.这里是b选项内容呀</span>
+    					</label><br />
+    					<label>
+        						<input type="radio" name="ques1" value="C" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">C.这里是c选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="D" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">D.这里是d选项内容呀</span>
+    					</label><br />
+					</form>
     			</li>
     			<li>
-    				<div>
-    					<input type="text" name="answer1" value=" 这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 " class="option-ques" readonly=“readonly”>
-    	       			<br>
-    	       			<table>
-    	        			<tr>
-    	        				<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>
-    	        				<td>请选择
-    	        					<select name="SelectType1">
-  										<option value="A" Selected>&nbsp;A&nbsp;</option>
-    									<option value="B">&nbsp;B&nbsp;</option>
-    									<option value="C">&nbsp;C&nbsp;</option>
-    									<option value="D">&nbsp;D&nbsp;</option>
-    								</select>
-    							</td>
-    	        			</tr>
-    	        		</table>
-    	      			<br>
-    				</div>
+    				<form action="" method="get">
+    					<p class="title">这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="A" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">A.这里是a选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="B" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">B.这里是b选项内容呀</span>
+    					</label><br />
+    					<label>
+        						<input type="radio" name="ques1" value="C" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">C.这里是c选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="D" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">D.这里是d选项内容呀</span>
+    					</label><br />
+					</form>
     			</li>
-    	
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="A" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">A.这里是a选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="B" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">B.这里是b选项内容呀</span>
+    					</label><br />
+    					<label>
+        						<input type="radio" name="ques1" value="C" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">C.这里是c选项内容呀</span>
+    					</label><br />
+    					<label>
+        				<input type="radio" name="ques1" value="D" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">D.这里是d选项内容呀</span>
+    					</label><br />
+					</form>
+    			</li>
+    				
     
     
-    		<br>
-    		<font size=+2>判断题</font>
-    		<br/>
-    		<hr>
-    
-    
-    	
-    		<li>
-    			<div>
-    				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
-    				<br>
-	    			<table>
-    					<tr>
-    						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    						<td>
-    							<select name="SelectType1">
-    								<option value="1" Selected>&nbsp;对&nbsp;</option>
-    								<option value="0">&nbsp;错&nbsp;</option>
-    							</select>
-	    					</td>
-    					</tr>
-    				</table>
-    				<br>
-	    		</div>
-    		</li>
-    		<li>
+				<br>
+				<font size=+2>判断题</font>
+				<br/>
+				<hr>
+    		
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+        						<input type="radio" name="ques1" value="1" class="Op-button">
+        						<span class="radio"></span>
+        						<span class="item">是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    					</label>
+    					<label>
+        				<input type="radio" name="ques1" value="0" class="Op-button">
+        				<span class="radio"></span>
+        				<span class="item">否</span>
+    					</label><br />
+					</form>
+    			</li>
+    			<!--不要了的版本1
+    			<li>
 	    		<div>
     				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
     				<br>
@@ -324,135 +625,375 @@
 	    			</table>
     				<br>
     			</div>
-	    	</li>
-    	    	
-    		<li>
-    			<div>
-    				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
-    				<br>
-	    			<table>
-    					<tr>
-    						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    						<td>
-    							<select name="SelectType1">
-    								<option value="1" Selected>&nbsp;对&nbsp;</option>
-    								<option value="0">&nbsp;错&nbsp;</option>
-    							</select>
-	    					</td>
-    					</tr>
-    				</table>
-    				<br>
-	    		</div>
-    		</li>
-    		<li>
-	    		<div>
-    				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
-    				<br>
-    				<table>
-    					<tr>
-    						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    						<td>
-	    						<select name="SelectType1">
-    								<option value="1" Selected>&nbsp;对&nbsp;</option>
-    								<option value="0">&nbsp;错&nbsp;</option>
-    							</select>
-    						</td>
-    					</tr>
-	    			</table>
-    				<br>
-    			</div>
-	    	</li>    	
-    		<li>
-    			<div>
-    				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
-    				<br>
-	    			<table>
-    					<tr>
-    						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    						<td>
-    							<select name="SelectType1">
-    								<option value="1" Selected>&nbsp;对&nbsp;</option>
-    								<option value="0">&nbsp;错&nbsp;</option>
-    							</select>
-	    					</td>
-    					</tr>
-    				</table>
-    				<br>
-	    		</div>
-    		</li>
-    		<li>
-	    		<div>
-    				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
-    				<br>
-    				<table>
-    					<tr>
-    						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    						<td>
-	    						<select name="SelectType1">
-    								<option value="1" Selected>&nbsp;对&nbsp;</option>
-    								<option value="0">&nbsp;错&nbsp;</option>
-    							</select>
-    						</td>
-    					</tr>
-	    			</table>
-    				<br>
-    			</div>
-	    	</li>    	
-    		<li>
-    			<div>
-    				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
-    				<br>
-	    			<table>
-    					<tr>
-    						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    						<td>
-    							<select name="SelectType1">
-    								<option value="1" Selected>&nbsp;对&nbsp;</option>
-    								<option value="0">&nbsp;错&nbsp;</option>
-    							</select>
-	    					</td>
-    					</tr>
-    				</table>
-    				<br>
-	    		</div>
-    		</li>
-    		<li>
-	    		<div>
-    				<input type="text" name="answer1 " value="这是判断题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" class="option-ques" readonly=“readonly”>
-    				<br>
-    				<table>
-    					<tr>
-    						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    						<td>
-	    						<select name="SelectType1">
-    								<option value="1" Selected>&nbsp;对&nbsp;</option>
-    								<option value="0">&nbsp;错&nbsp;</option>
-    							</select>
-    						</td>
-    					</tr>
-	    			</table>
-    				<br>
-    			</div>
-	    	</li>
+	    	</li>-->
     
     		<br><font size=+2>多选题</font><br/>
 	    	<hr>
-    		<li>
-    			<table>
-    				<tr>   				
-    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
-	    			</tr>	
-    				<tr>
-    					<div>				
-	    					<input type="checkbox" name="chkVal" value="A">A
-    						<input type="checkbox" name="chkVal" value="B">B
-    						<input type="checkbox" name="chkVal" value="C">C
-    						<input type="checkbox" name="chkVal" value="D">D
-    						<input type="checkbox" name="chkVal" value="E">E	
-    					</div>
-	    			</tr>
-    			</table>
+    		
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是多选题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">A.这里是a选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="B" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">B.这里是b选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">C.这里是c选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">D.这里是d选项内容呀</span>
+						</label><br />						
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是多选题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">A.这里是a选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="B" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">B.这里是b选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">C.这里是c选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">D.这里是d选项内容呀</span>
+						</label><br />						
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是多选题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">A.这里是a选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="B" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">B.这里是b选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">C.这里是c选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">D.这里是d选项内容呀</span>
+						</label><br />						
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是多选题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">A.这里是a选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="B" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">B.这里是b选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">C.这里是c选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">D.这里是d选项内容呀</span>
+						</label><br />						
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是多选题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">A.这里是a选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="B" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">B.这里是b选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">C.这里是c选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">D.这里是d选项内容呀</span>
+						</label><br />						
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是多选题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">A.这里是a选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="B" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">B.这里是b选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">C.这里是c选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">D.这里是d选项内容呀</span>
+						</label><br />						
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是多选题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">A.这里是a选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="B" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">B.这里是b选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">C.这里是c选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">D.这里是d选项内容呀</span>
+						</label><br />						
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是多选题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">A.这里是a选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="B" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">B.这里是b选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">C.这里是c选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">D.这里是d选项内容呀</span>
+						</label><br />						
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是多选题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">A.这里是a选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="B" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">B.这里是b选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">C.这里是c选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">D.这里是d选项内容呀</span>
+						</label><br />						
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是多选题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">A.这里是a选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="B" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">B.这里是b选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">C.这里是c选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">D.这里是d选项内容呀</span>
+						</label><br />						
+					</form>
+    			</li>
+    			<li>
+    				<form action="" method="get">
+    					<p class="title">这里是多选题题目啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+    					<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">A.这里是a选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="B" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">B.这里是b选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">C.这里是c选项内容呀</span>
+						</label><br />
+						<label>
+							<input type="checkbox" name="ques1" value="A" class="Op-button">
+							<span class="checkbox">
+								<i>&check;</i>
+							</span>
+							<span class="item">D.这里是d选项内容呀</span>
+						</label><br />						
+					</form>
     		</li>
+    		<!--不要的版本1
     		<li>
     			<table>
     				<tr>   				
@@ -468,117 +1009,79 @@
     					</div>
 	    			</tr>
     			</table>
-    		</li>
-    		<li>
-    			<table>
-    				<tr>   				
-    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
-	    			</tr>	
-    				<tr>
-    					<div>				
-	    					<input type="checkbox" name="chkVal" value="A">A
-    						<input type="checkbox" name="chkVal" value="B">B
-    						<input type="checkbox" name="chkVal" value="C">C
-    						<input type="checkbox" name="chkVal" value="D">D
-    						<input type="checkbox" name="chkVal" value="E">E	
-    					</div>
-	    			</tr>
-    			</table>
-    		</li>
-    		<li>
-    			<table>
-    				<tr>   				
-    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
-	    			</tr>	
-    				<tr>
-    					<div>				
-	    					<input type="checkbox" name="chkVal" value="A">A
-    						<input type="checkbox" name="chkVal" value="B">B
-    						<input type="checkbox" name="chkVal" value="C">C
-    						<input type="checkbox" name="chkVal" value="D">D
-    						<input type="checkbox" name="chkVal" value="E">E	
-    					</div>
-	    			</tr>
-    			</table>
-    		</li>
-    		<li>
-    			<table>
-    				<tr>   				
-    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
-	    			</tr>	
-    				<tr>
-    					<div>				
-	    					<input type="checkbox" name="chkVal" value="A">A
-    						<input type="checkbox" name="chkVal" value="B">B
-    						<input type="checkbox" name="chkVal" value="C">C
-    						<input type="checkbox" name="chkVal" value="D">D
-    						<input type="checkbox" name="chkVal" value="E">E	
-    					</div>
-	    			</tr>
-    			</table>
-    		</li>
-    		<li>
-    			<table>
-    				<tr>   				
-    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
-	    			</tr>	
-    				<tr>
-    					<div>				
-	    					<input type="checkbox" name="chkVal" value="A">A
-    						<input type="checkbox" name="chkVal" value="B">B
-    						<input type="checkbox" name="chkVal" value="C">C
-    						<input type="checkbox" name="chkVal" value="D">D
-    						<input type="checkbox" name="chkVal" value="E">E	
-    					</div>
-	    			</tr>
-    			</table>
-    		</li>
-    		<li>
-    			<table>
-    				<tr>   				
-    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
-	    			</tr>	
-    				<tr>
-    					<div>				
-	    					<input type="checkbox" name="chkVal" value="A">A
-    						<input type="checkbox" name="chkVal" value="B">B
-    						<input type="checkbox" name="chkVal" value="C">C
-    						<input type="checkbox" name="chkVal" value="D">D
-    						<input type="checkbox" name="chkVal" value="E">E	
-    					</div>
-	    			</tr>
-    			</table>
-    		</li>
-    		<li>
-    			<table>
-    				<tr>   				
-    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
-	    			</tr>	
-    				<tr>
-    					<div>				
-	    					<input type="checkbox" name="chkVal" value="A">A
-    						<input type="checkbox" name="chkVal" value="B">B
-    						<input type="checkbox" name="chkVal" value="C">C
-    						<input type="checkbox" name="chkVal" value="D">D
-    						<input type="checkbox" name="chkVal" value="E">E	
-    					</div>
-	    			</tr>
-    			</table>
-    		</li>        
+    		</li>        -->
+    		<hr />
     	</ol>
-    	<hr>
-    	<center>
-    		<table>
+    	
+    	<center id="footer">
+    		<table >
     			<tr>
     				<td>&nbsp;&nbsp;&nbsp;</td>
     				<td>&nbsp;&nbsp;&nbsp;</td>
-    				<td><button type="button" class="ant-btn">提交答卷</button></td>
-    				<td><font size＝ －1>**请务必答完全部题目,再提交试卷</font></td>
+    				<td>	
+    					<td><font size＝ －1>**请务必答完全部题目,再提交试卷</font></td>
+    					<button type="button" class="ant-btn sgBtn" id="btn">提交答卷</button>
+    				</td>
     			</tr>
     		</table>
     	</center>
-    	<hr>
-    	<div id="myDiv"></div>
+    		<!--  -->
     	</div>
+	   </div>
+    	<!--<div class="a">
+			<div class="a-header">
+				<div>提示</div>
+				<span id="vanish"></span>
+			</div>
+			<div class="a-center">
+				
+				<div class="bigIcon"></div>
+				<p>是否确认提交答卷？</p>
+				
+			</div>
+			<div class="a-footer">
+				<div class="btnGroup">
+					<div class="sgbtn ok">确认</div>
+					<div class="sgbtn cancel1">取消</div>
+				</div>
+			</div>-->
+			<div class="a suggest">
+					<div class="a-header">
+						<div>提示</div>
+						<span class="vanish1"></span>
+					</div>
+					<div class="a-center">
+						<!-- <center> -->
+							<div class="bigIcon icon1"></div>
+							<p>是否确认提交答卷？</p>
+						<!-- </center> -->
+					</div>
+					<div class="a-footer">
+						<div class="btnGroup">
+							<div class="sgbtn ok1">确认</div>
+							<div class="sgbtn cancel">取消</div>
+						</div>
+					</div>
+			</div>
+			<div class="a success">
+					<div class="a-header">
+						<div>成功</div>
+						<span class="vanish2"></span>
+					</div>
+					<div class="a-center">
+						<!-- <center> -->
+							<div class="bigIcon icon2"></div>
+							<p>答卷提交成功</p>
+						<!-- </center> -->
+					</div>
+					<div class="a-footer">
+						<div class="btnGroup">
+							<a href="#"><div class="sgbtn ok2">确认</div></a>
+						</div>
+					</div>
+			</div>
+				
+		<script src="js/bulletWindow.js" type="text/javascript" charset="utf-8"></script>
+			
 	</body>
 </html>

@@ -80,12 +80,13 @@ public class ProjectDAO {
 		}
 	}
 	
-	public Paper getPaper(String a) {
-		String sql = "select * from ?";
+	public Paper getPaper(String paperNum) {
+//		String sql = "select * from ?";
+		String sql = "select * from "+paperNum;
 		ArrayList<Topic> topics = new ArrayList<Topic>();
 		try {
 			statement = connection.prepareStatement(sql);
-			statement.setString(1 , a);
+//			statement.setString(1 , paperNum);
 			ResultSet rs = statement.executeQuery();
 			while(rs.next()) {
 				int num = rs.getInt("num");
@@ -104,8 +105,7 @@ public class ProjectDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		return new Paper(a,topics);
+		return new Paper(paperNum,topics);
 	}
 	
 	
