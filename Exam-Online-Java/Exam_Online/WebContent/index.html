@@ -34,7 +34,7 @@
             <td>1</td>
             <td>试卷A</td>
             <td class="test_name">A</td>
-            <td><a href="makeExam.html" class="begin" onclick="fun(this);">开始考试</a> </td>
+            <td><a href="#" class="begin" onclick="fun(this);">开始考试</a> </td>
         </tr>
         <tr>
             <td>2</td>
@@ -92,7 +92,7 @@
         </tr>
     </table>
 </body>
-<script src="jquery-1.12.4.js"></script>
+<script src="js/jquery-1.12.4.js"></script>
 <script>
     var name
     function fun(data){
@@ -102,7 +102,10 @@
         $.ajax({
             url:"begin_examServlet",
             type:"post",
-            data:{"test_name":name}
+            data:{"test_name":name},
+            success: function(data) {
+                console.log(data);
+            }
         })
     })
 </script>

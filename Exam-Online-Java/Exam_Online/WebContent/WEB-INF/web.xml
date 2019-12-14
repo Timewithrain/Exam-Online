@@ -66,6 +66,16 @@
   </servlet-mapping>
   
   <servlet>
+  	<servlet-name>BeginExamServlet</servlet-name>
+  	<servlet-class>com.project.servlet.BeginExamServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>BeginExamServlet</servlet-name>
+  	<url-pattern>/begin_examServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
   	<servlet-name>QueryServlet</servlet-name>
   	<servlet-class>com.project.servlet.QueryServlet</servlet-class>
   </servlet>
