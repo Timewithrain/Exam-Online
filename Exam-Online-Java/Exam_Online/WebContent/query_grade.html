@@ -11,10 +11,26 @@
     <div id="query">  
         <h1>成绩查询</h1>  
         <form action="queryGrade" method="post">
-            <input type="text" required="required" placeholder="用户名" name="u"></input>  
-            <input type="test_paper_no" required="required" placeholder="试卷名称" name="test_paper_no"></input>  
-            <button class="but" type="submit">查询</button>  
+            <input type="text" required="required" placeholder="用户名" name="userName" id="userName"></input>  
+            <input type="test_paper_no" required="required" placeholder="试卷名称" name="test_paper_no" id="test_paper_no"></input>  
+            <button class="but" id="query">查询</button>  
         </form> 
     </div> 
 </body>
+ <script src="jquery-1.12.4.js"></script>
+    <script>
+    document.getElementById("query").onclick = function(){
+    	$.ajax({
+			type: "POST",
+			//地址要改
+           url:"http://localhost:8080/homework/Order_get",
+           data:"userName="+document.getElementById("userName").value+"&test_paper_no="+document.getElementById("test_paper_no").value,
+           success:function(data){
+        	   alert(data);
+           },
+           dataType:json
+    }
+    
+       //  })
+    </script>
 </html>
