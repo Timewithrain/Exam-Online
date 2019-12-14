@@ -33,63 +33,77 @@
         <tr>
             <td>1</td>
             <td>试卷A</td>
-            <td>JAVA</td>
-            <td><a href="makeExam.html">开始考试</a> </td>
+            <td class="test_name">A</td>
+            <td><a href="makeExam.html" class="begin" onclick="fun(this);">开始考试</a> </td>
         </tr>
         <tr>
             <td>2</td>
-            <td>试卷A</td>
-            <td>JAVA</td>
+            <td>试卷B</td>
+            <td class="test_name">B</td>
+            <td><a href="">开始考试</a> </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>试卷C</td>
+            <td class="test_name">C</td>
             <td><a href="">开始考试</a> </td>
         </tr>
         <tr>
             <td>3</td>
             <td>试卷A</td>
-            <td>JAVA</td>
+            <td class="test_name">A</td>
             <td><a href="">开始考试</a> </td>
         </tr>
         <tr>
             <td>3</td>
             <td>试卷A</td>
-            <td>JAVA</td>
+            <td class="test_name">A</td>
             <td><a href="">开始考试</a> </td>
         </tr>
         <tr>
             <td>3</td>
             <td>试卷A</td>
-            <td>JAVA</td>
+            <td class="test_name">A</td>
             <td><a href="">开始考试</a> </td>
         </tr>
         <tr>
             <td>3</td>
             <td>试卷A</td>
-            <td>JAVA</td>
+            <td class="test_name">A</td>
             <td><a href="">开始考试</a> </td>
         </tr>
         <tr>
             <td>3</td>
             <td>试卷A</td>
-            <td>JAVA</td>
+            <td class="test_name">A</td>
             <td><a href="">开始考试</a> </td>
         </tr>
         <tr>
             <td>3</td>
             <td>试卷A</td>
-            <td>JAVA</td>
+            <td class="test_name">A</td>
             <td><a href="">开始考试</a> </td>
         </tr>
         <tr>
             <td>3</td>
             <td>试卷A</td>
-            <td>JAVA</td>
-            <td><a href="">开始考试</a> </td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>试卷A</td>
-            <td>JAVA</td>
+            <td class="test_name">A</td>
             <td><a href="">开始考试</a> </td>
         </tr>
     </table>
 </body>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    var name
+    function fun(data){
+        name = data.parentNode.previousElementSibling.innerHTML
+    }
+    $(".begin").click(function(){
+        $.ajax({
+            url:"begin_examServlet",
+            type:"post",
+            data:{"test_name":name}
+        })
+    })
+</script>
 </html>
