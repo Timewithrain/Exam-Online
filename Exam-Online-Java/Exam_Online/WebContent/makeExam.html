@@ -5,10 +5,12 @@
 		<title></title>
 	</head>
 	
-	<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/count-down.js" type="text/javascript" charset="utf-8"></script>
  	<link rel="stylesheet" href="css/exam_Sub.css" type="text/css"></link>
- 	
+     <script>
+         
+     </script>
 	<body>
 	   <div id="mydiv">
 	   	 <div id="divFrame">
@@ -993,23 +995,6 @@
 						</label><br />						
 					</form>
     		</li>
-    		<!--不要的版本1
-    		<li>
-    			<table>
-    				<tr>   				
-    					<input type="text" id="answerMore1" value="这是多选题题目和选项" class="option-ques" readonly=“readonly”>
-	    			</tr>	
-    				<tr>
-    					<div>				
-	    					<input type="checkbox" name="chkVal" value="A">A
-    						<input type="checkbox" name="chkVal" value="B">B
-    						<input type="checkbox" name="chkVal" value="C">C
-    						<input type="checkbox" name="chkVal" value="D">D
-    						<input type="checkbox" name="chkVal" value="E">E	
-    					</div>
-	    			</tr>
-    			</table>
-    		</li>        -->
     		<hr />
     	</ol>
     	
@@ -1028,23 +1013,6 @@
     		<!--  -->
     	</div>
 	   </div>
-    	<!--<div class="a">
-			<div class="a-header">
-				<div>提示</div>
-				<span id="vanish"></span>
-			</div>
-			<div class="a-center">
-				
-				<div class="bigIcon"></div>
-				<p>是否确认提交答卷？</p>
-				
-			</div>
-			<div class="a-footer">
-				<div class="btnGroup">
-					<div class="sgbtn ok">确认</div>
-					<div class="sgbtn cancel1">取消</div>
-				</div>
-			</div>-->
 			<div class="a suggest">
 					<div class="a-header">
 						<div>提示</div>
@@ -1074,14 +1042,13 @@
 							<p>答卷提交成功</p>
 						<!-- </center> -->
 					</div>
-					<div class="a-footer">
+					<div class="a-footer" id="ok">
 						<div class="btnGroup">
-							<a href="#"><div class="sgbtn ok2">确认</div></a>
+							<a href="index.html"><div class="sgbtn ok2" id="sure">确认</div></a>
 						</div>
 					</div>
 			</div>
 				
-		<script src="js/bulletWindow.js" type="text/javascript" charset="utf-8"></script>
-			
+        <script src="js/bulletWindows.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>
