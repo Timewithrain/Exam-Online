@@ -9,18 +9,19 @@ body{
     height: 100%;   
     font-family: 'Open Sans',sans-serif;   
     margin: 0;   
-    background-color: rgb(131, 107, 131);   
 }   
-#query{   
+#query_body{   
     position: absolute;   
     top: 50%;   
     left:50%;   
     margin: -150px 0 0 -150px;   
-    width: 300px;   
-    height: 300px;   
+    width: 350px;   
+    height: 250px;   
+    border: 1px solid black;
+    border-radius: 4px;
 }   
-#query h1{   
-    color: rgb(243, 235, 235);   
+#query_body h1{   
+    color: rgb(70, 66, 66);   
     text-shadow:0 0 10px;   
     letter-spacing: 1px;   
     text-align: center;   
@@ -29,7 +30,8 @@ h1{
     font-size: 2em;   
     margin: 0.67em 0;   
 }   
-input{   
+input{  
+    margin-left: 25px; 
     width: 278px;   
     height: 18px;   
     margin-bottom: 10px;   
@@ -49,12 +51,13 @@ input{
     width: 300px;   
     min-height: 20px;   
     display: block;   
-    background-color: #86a9f0;   
-    border: 1px solid #759bec;   
+    background-color: rgb(34, 34, 48);     
+    border: 1px solid black;   
     color: rgb(240, 224, 224);   
     padding: 9px 14px;   
     font-size: 15px;   
     line-height: normal;   
     border-radius: 5px;   
-    margin: 0;   
+    margin: 0;  
+    margin-left: 25px; 
 }  

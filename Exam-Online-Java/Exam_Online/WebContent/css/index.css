@@ -35,8 +35,13 @@ a{
 }
 .mess{
 	font-size: 30px;
-	padding: 10px;
+	padding: 5px;
 	text-align: center;
+	background-color: azure;
+	border: 1px solid rgb(163, 159, 159);
+	background-color: rgb(228, 210, 228);
+	color: rgb(173, 165, 165);
+	border-top: none;
 }
 .tab{
 	border: 1px solid rgb(216, 208, 208);
@@ -44,10 +49,18 @@ a{
 	border-collapse:collapse ;
 }
 td{
-	border: 1px solid rgb(216, 208, 208);
+	border: 1px solid rgb(163, 159, 159);
 	text-align: center;
 	height: 50px;
 }
 th{
-	height: 35px;
+	border: 1px solid rgb(216, 208, 208);
+	height: 45px;
+	background-color: rgb(167, 157, 167);
+}
+.odd{
+	background-color: rgb(185, 171, 185);
+}
+.even{
+	background-color: rgb(218, 205, 218);
 }
