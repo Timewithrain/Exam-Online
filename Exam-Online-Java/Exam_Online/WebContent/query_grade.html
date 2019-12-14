@@ -8,29 +8,26 @@
     <link rel="stylesheet" href="css/query_grade.css">
 </head>
 <body>
-    <div id="query">  
+    <div id="query_body">  
         <h1>成绩查询</h1>  
         <form action="queryGrade" method="post">
             <input type="text" required="required" placeholder="用户名" name="userName" id="userName"></input>  
             <input type="test_paper_no" required="required" placeholder="试卷名称" name="test_paper_no" id="test_paper_no"></input>  
             <button class="but" id="query">查询</button>  
         </form> 
-    </div> 
+    </div>
 </body>
- <script src="jquery-1.12.4.js"></script>
+<script src="js/jquery-1.12.4.js"></script>
     <script>
-    document.getElementById("query").onclick = function(){
-    	$.ajax({
-			type: "POST",
-			//地址要改
-           url:"http://localhost:8080/homework/Order_get",
-           data:"userName="+document.getElementById("userName").value+"&test_paper_no="+document.getElementById("test_paper_no").value,
-           success:function(data){
-        	   alert(data);
-           },
-           dataType:json
-    }
-    
+    	$.post("queryServlet", function(data) {
+    		var elem = eval(data);
+    		for(var i=0;i<=elem.length;i++){
+    			
+    		   alert(elem[i].userName+"   "+elem[i].test_paper_no+"    "+elem[i].grade);
+    		   
+    		}
+            });
+
        //  })
     </script>
 </html>
