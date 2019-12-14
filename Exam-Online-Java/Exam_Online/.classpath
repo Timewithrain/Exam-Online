@@ -20,6 +20,5 @@
 	<classpathentry kind="lib" path="D:/Programs/JAVA/workspace/Exam-Online/Exam-Online-Java/Exam_Online/WebContent/WEB-INF/lib/jackson-core-2.9.8-sources.jar"/>
 	<classpathentry kind="lib" path="D:/Programs/JAVA/workspace/Exam-Online/Exam-Online-Java/Exam_Online/WebContent/WEB-INF/lib/jackson-databind-2.9.8.jar"/>
 	<classpathentry kind="lib" path="D:/Programs/JAVA/workspace/Exam-Online/Exam-Online-Java/Exam_Online/WebContent/WEB-INF/lib/jackson-databind-2.9.8-sources.jar"/>
-	<classpathentry kind="lib" path="D:/Programs/JAVA/workspace/Exam-Online/Exam-Online-Java/Exam_Online/WebContent/WEB-INF/lib/json-lib-2.4-jdk15.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
