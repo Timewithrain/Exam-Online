@@ -63,7 +63,6 @@
 			var grade = 0;
 			for(var i=0;i<topics.length;i++){
 				var val = $('input[name="ques'+(i+1)+'"]:checked').val();
-				// 此处还无法判断
 				console.log(val+":"+rightAnswers[i])
 				if(val==rightAnswers[i]){
 					grade = grade + 5;
