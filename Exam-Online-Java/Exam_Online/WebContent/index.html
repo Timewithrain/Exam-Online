@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>index</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
     <div id="top">
@@ -16,12 +17,9 @@
             <li><a href="userinfo.html">个人信息</a></li>
             <li><a href="query_grade.html">成绩查询</a></li>
             <li><a href="exit">退出系统</a></li>
-            <li><a href="about_us.html">联系作者</a></li>
+            <li><a href="about_us.html">关于我们</a></li>
         </ul>
         </div>
-    </div>
-    <div class="mess">
-        注意以下考试即将开始
     </div>
     <table class="tab">
         <tr>
@@ -30,82 +28,86 @@
             <th>所属类型</th>
             <th>操作</th>
         </tr>
-        <tr>
+        <tr class="odd">
             <td>1</td>
             <td>试卷A</td>
             <td class="test_name">A</td>
             <td><a href="makeExam.html" class="begin" onclick="fun(this);">开始考试</a> </td>
         </tr>
-        <tr>
+        <tr class="even">
             <td>2</td>
             <td>试卷B</td>
             <td class="test_name">B</td>
             <td><a href="">开始考试</a> </td>
         </tr>
-        <tr>
+        <tr class="odd">
             <td>3</td>
             <td>试卷C</td>
             <td class="test_name">C</td>
             <td><a href="">开始考试</a> </td>
         </tr>
-        <tr>
+        <tr class="even">
             <td>3</td>
             <td>试卷A</td>
             <td class="test_name">A</td>
             <td><a href="">开始考试</a> </td>
         </tr>
-        <tr>
+        <tr class="odd">
             <td>3</td>
             <td>试卷A</td>
             <td class="test_name">A</td>
             <td><a href="">开始考试</a> </td>
         </tr>
-        <tr>
+        <tr class="even">
             <td>3</td>
             <td>试卷A</td>
             <td class="test_name">A</td>
             <td><a href="">开始考试</a> </td>
         </tr>
-        <tr>
+        <tr class="odd">
             <td>3</td>
             <td>试卷A</td>
             <td class="test_name">A</td>
             <td><a href="">开始考试</a> </td>
         </tr>
-        <tr>
+        <tr class="even">
             <td>3</td>
             <td>试卷A</td>
             <td class="test_name">A</td>
             <td><a href="">开始考试</a> </td>
         </tr>
-        <tr>
+        <tr class="odd">
             <td>3</td>
             <td>试卷A</td>
             <td class="test_name">A</td>
             <td><a href="">开始考试</a> </td>
-        </tr>
-        <tr>
+        </tr >
+        <tr class="even">
             <td>3</td>
             <td>试卷A</td>
             <td class="test_name">A</td>
             <td><a href="">开始考试</a> </td>
         </tr>
     </table>
+    <div class="mess">
+        注意以上考试即将开始
+    </div>
 </body>
-<script src="js/jquery-1.12.4.js"></script>
+<script src="jquery-1.12.4.js"></script>
 <script>
     var name
     function fun(data){
         name = data.parentNode.previousElementSibling.innerHTML
     }
     $(".begin").click(function(){
-        $.ajax({
-            url:"indexServlet",
+
+        /*$.ajax({
+            url:"begin_examServlet",
             type:"post",
-            data:{"test_name":name},
-            success: function(data) {
-                console.log(data);
-            }
+            data:{"test_name":name}
+        })*/
+        $.post("indexServlet",{"test_name":name},function(data){
+
         })
     })
 </script>

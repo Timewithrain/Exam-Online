@@ -6,41 +6,53 @@
     <link rel="stylesheet" href="css/userinfo.css">
     <script src="jquery-1.12.4.js"></script>
     <script>
-    $(function(){
+   // $(function(){
+
         //需要修改地址
-    // $.ajax({
-         //   url:"http://localhost:8080/homework/Order_get",
-        //   data:"info="+info,
-          //   success:function(){},
-          //   dataType:json
-        //  })
-//这是测试数据
-  var info=[
-	{
-		"sno":"001",
-		"name":"1",
-		"dept":"a"
-	
-		
-	},
-	{
-		"sno":"002",
-		"name":"2",
-		"dept":"b"
-		
-	}
-]
-          $("#info").empty();
-          for(var i = 0;i < info.length;i++){
-              var $str = $("<tr></tr>");
-              $str.append("<th>"+info[i].sno+"</th>");//学号
-              $str.append("<th>"+info[i].name+"</th>");//名字
-              $str.append("<th>"+info[i].dept+"</th>");//学院
+  //  $.ajax({
+       //     type: "POST"
+       //     url:"http://localhost:8080/homework/Order_get",
+      //    data:"userName="+userName,
+      //       success:function(data){
+       //     	 info = data;
+       //      },
+        //     dataType:json
+
+       //   })
+
+
+         $("#info").empty();
+
+         for(var i = 0;i < info.length;i++){
+            var $str = $("<tr></tr>");
+           $str.append("<th>"+info[i].sno+"</th>");//学号
+             $str.append("<th>"+info[i].name+"</th>");//名字
+            $str.append("<th>"+info[i].dept+"</th>");//学院
           
-              $str.appendTo("#info");
+
+             $str.appendTo("#info");
           };
         
-      })
+     })
+     
+      	$.post("userinfoServlet", function(data) {
+    		var elem = eval(data);
+    		for(var i=0 ;i<=elem.length;i++){
+    	
+    			  $("#info").empty();
+
+    		         for(var i = 0;i < elem.length;i++){
+    		            var $str = $("<tr></tr>");
+    		           $str.append("<th>"+elem[i].sno+"</th>");//学号
+    		             $str.append("<th>"+elem[i].name+"</th>");//名字
+    		            $str.append("<th>"+elem[i].dept+"</th>");//学院
+    		          
+
+    		             $str.appendTo("#info");
+    		          };
+    		   
+    		}});
+
     </script>
 </head>
 <body>
