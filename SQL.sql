@@ -16,6 +16,17 @@
 CREATE DATABASE IF NOT EXISTS `exam` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
 USE `exam`;
 
+-- 导出  表 exam. usergrade 结构
+CREATE TABLE IF NOT EXISTS ` usergrade` (
+  `username` varchar(200) COLLATE utf8_bin NOT NULL,
+  `examname` varchar(200) COLLATE utf8_bin NOT NULL,
+  `grade` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- 正在导出表  exam. usergrade 的数据：~0 rows (大约)
+/*!40000 ALTER TABLE ` usergrade` DISABLE KEYS */;
+/*!40000 ALTER TABLE ` usergrade` ENABLE KEYS */;
+
 -- 导出  表 exam.a 结构
 CREATE TABLE IF NOT EXISTS `a` (
   `num` int(11) NOT NULL,
@@ -25,34 +36,33 @@ CREATE TABLE IF NOT EXISTS `a` (
   `C` varchar(200) COLLATE utf8_bin NOT NULL,
   `D` varchar(200) COLLATE utf8_bin NOT NULL,
   `right` varchar(200) COLLATE utf8_bin NOT NULL,
-  `selection` varchar(200) COLLATE utf8_bin NOT NULL,
   `grade` int(11) NOT NULL,
   PRIMARY KEY (`num`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- 正在导出表  exam.a 的数据：~20 rows (大约)
 /*!40000 ALTER TABLE `a` DISABLE KEYS */;
-INSERT INTO `a` (`num`, `timu`, `A`, `B`, `C`, `D`, `right`, `selection`, `grade`) VALUES
-	(1, '从模拟信号变换成数字信号的过程称为', '调制', '解调', '解压缩', '压缩', 'B', '', 5),
-	(2, '使计算机病毒传播范围最广的媒介是____', '硬磁盘', '软磁盘', '内部存储器', '互联网', 'D', '', 5),
-	(3, '内存中的每个基本单元，都被赋予一个唯一____，称为地址', '容量', '字节', '序号', '功能', 'C', '', 5),
-	(4, '内存储器可分为随机存取存储器和____', '硬盘存储器 ', '动态随机存储器', '只读存储器', '光盘存储器', 'C', '', 5),
-	(5, '计算机正常关机后____中的信息不会消失', 'ROM', 'RAM', 'CACHE', 'CPU', 'A', '', 5),
-	(6, '关于因特网中的WWW服务，以下哪种说法是错误的____', 'WWW服务器中存储的通常是符合HTML规范的结构化文档', 'WWW服务器必须具有创建和编辑Web页面的功能', 'WWW客户端程序也被称为WWW浏览器', 'WWW服务器也被称为Web站点', 'B', '', 5),
-	(7, '某系统中有13 台磁带机，K 个进程共享这些设备，每个进程最多请求使用3 台，则系统不会死锁的K值是', '不小于3', '不大于6', '不大于13', '在6与10之间', 'B', '', 5),
-	(8, '完整的冯?诺依曼结构的计算机，其硬件系统包括____', 'CPU、内存、键盘、显示器', '运算器、控制器、键盘、显示器', 'CPU、存储器、输出设备、输入设备', 'CPU、存储器、键盘、鼠标器、显示器', 'C', '', 5),
-	(9, '计算机的硬件系统是由____组成', 'CPU、控制器、存储器、输入设备和输出设备', '运算器、控制器、存储器、输入设备和输出', '运算器、存储器、输入设备和输出设备', 'CPU、运算器、存储器、输入设备和输出设备', 'B', '', 5),
-	(10, '操作系统是系统资源的管理者，不能管理____', '计算机所有软件', '计算机所有硬件', '计算机所有数据', '计算机的使用者', 'D', '', 5),
-	(11, '半导体只读存储器（ROM）与半导体随机存储器（RAM）的主要区别在于____', 'ROM 可以永久保存信息，RAM在掉电后信息会丢失', 'ROM 掉电后，信息会丢失，RAM则不会', 'ROM是内存储器，RAM是外存储器', 'ROM是外存储器，RAM是内存储器', 'A', '', 5),
-	(12, '现在网上有个比较流行的词叫闪客，通常的把什么样的人叫做闪客', '擅长用PhotoShop绘画', '擅长用电脑制作音乐', '擅长用Flash制作动画', '擅长用电脑写作', 'C', '', 5),
-	(13, '英文缩写URL所表示的中文含义是____', '通用串行总线', '文件传输协议', '电子邮件协议', '统一资源定位器', 'D', '', 5),
-	(14, '目前校园网一般采用的拓扑结构为____', '总线形', '星型', '环型', '树型', 'B', '', 5),
-	(15, '调制解调器的主要作用是实现___', '图形与图像之间的转换', '广播信号与电视信号的转换', '音频信号与视频信号的转换', '模拟信号与数字信号的转换', 'D', '', 5),
-	(16, '操作系统的主要功能是针对计算机系统的四类资源进行有效的管理，该四类资源是____', '处理器、存储器、打印机和文件系统', '处理器、硬盘、键盘和显示器', '处理器、网络设备、I/O设备和显示器', '处理器、存储器、I/O设备和文件系', 'D', '', 5),
-	(17, '图像数据压缩的目的是____', '为了符合ISO标准，便于处理 ', '为了符合各国的电视制式', '为了减少数据存储量，利于传输 ', '为了图像编辑的方便', 'C', '', 5),
-	(18, '计算机将程序和数据存放在机器的______里', '控制器', '存储器', '输入/ 输出设备', '运算器', 'B', '', 5),
-	(19, '人们通常说的扩计算机的内存，指的是', 'ROM ', 'CMOS ', 'CPU', 'RAM', 'D', '', 5),
-	(20, '使用电子邮件时，有时收到的邮件有古怪字符，既出现了乱码，这是由于____', '病毒', '接收方操作系统有问题 ', '发送方计算机故障', '编码未统一', 'D', '', 5);
+INSERT INTO `a` (`num`, `timu`, `A`, `B`, `C`, `D`, `right`, `grade`) VALUES
+	(1, '从模拟信号变换成数字信号的过程称为', '调制', '解调', '解压缩', '压缩', 'B', 5),
+	(2, '使计算机病毒传播范围最广的媒介是____', '硬磁盘', '软磁盘', '内部存储器', '互联网', 'D', 5),
+	(3, '内存中的每个基本单元，都被赋予一个唯一____，称为地址', '容量', '字节', '序号', '功能', 'C', 5),
+	(4, '内存储器可分为随机存取存储器和____', '硬盘存储器 ', '动态随机存储器', '只读存储器', '光盘存储器', 'C', 5),
+	(5, '计算机正常关机后____中的信息不会消失', 'ROM', 'RAM', 'CACHE', 'CPU', 'A', 5),
+	(6, '关于因特网中的WWW服务，以下哪种说法是错误的____', 'WWW服务器中存储的通常是符合HTML规范的结构化文档', 'WWW服务器必须具有创建和编辑Web页面的功能', 'WWW客户端程序也被称为WWW浏览器', 'WWW服务器也被称为Web站点', 'B', 5),
+	(7, '某系统中有13 台磁带机，K 个进程共享这些设备，每个进程最多请求使用3 台，则系统不会死锁的K值是', '不小于3', '不大于6', '不大于13', '在6与10之间', 'B', 5),
+	(8, '完整的冯?诺依曼结构的计算机，其硬件系统包括____', 'CPU、内存、键盘、显示器', '运算器、控制器、键盘、显示器', 'CPU、存储器、输出设备、输入设备', 'CPU、存储器、键盘、鼠标器、显示器', 'C', 5),
+	(9, '计算机的硬件系统是由____组成', 'CPU、控制器、存储器、输入设备和输出设备', '运算器、控制器、存储器、输入设备和输出', '运算器、存储器、输入设备和输出设备', 'CPU、运算器、存储器、输入设备和输出设备', 'B', 5),
+	(10, '操作系统是系统资源的管理者，不能管理____', '计算机所有软件', '计算机所有硬件', '计算机所有数据', '计算机的使用者', 'D', 5),
+	(11, '半导体只读存储器（ROM）与半导体随机存储器（RAM）的主要区别在于____', 'ROM 可以永久保存信息，RAM在掉电后信息会丢失', 'ROM 掉电后，信息会丢失，RAM则不会', 'ROM是内存储器，RAM是外存储器', 'ROM是外存储器，RAM是内存储器', 'A', 5),
+	(12, '现在网上有个比较流行的词叫闪客，通常的把什么样的人叫做闪客', '擅长用PhotoShop绘画', '擅长用电脑制作音乐', '擅长用Flash制作动画', '擅长用电脑写作', 'C', 5),
+	(13, '英文缩写URL所表示的中文含义是____', '通用串行总线', '文件传输协议', '电子邮件协议', '统一资源定位器', 'D', 5),
+	(14, '目前校园网一般采用的拓扑结构为____', '总线形', '星型', '环型', '树型', 'B', 5),
+	(15, '调制解调器的主要作用是实现___', '图形与图像之间的转换', '广播信号与电视信号的转换', '音频信号与视频信号的转换', '模拟信号与数字信号的转换', 'D', 5),
+	(16, '操作系统的主要功能是针对计算机系统的四类资源进行有效的管理，该四类资源是____', '处理器、存储器、打印机和文件系统', '处理器、硬盘、键盘和显示器', '处理器、网络设备、I/O设备和显示器', '处理器、存储器、I/O设备和文件系', 'D', 5),
+	(17, '图像数据压缩的目的是____', '为了符合ISO标准，便于处理 ', '为了符合各国的电视制式', '为了减少数据存储量，利于传输 ', '为了图像编辑的方便', 'C', 5),
+	(18, '计算机将程序和数据存放在机器的______里', '控制器', '存储器', '输入/ 输出设备', '运算器', 'B', 5),
+	(19, '人们通常说的扩计算机的内存，指的是', 'ROM ', 'CMOS ', 'CPU', 'RAM', 'D', 5),
+	(20, '使用电子邮件时，有时收到的邮件有古怪字符，既出现了乱码，这是由于____', '病毒', '接收方操作系统有问题 ', '发送方计算机故障', '编码未统一', 'D', 5);
 /*!40000 ALTER TABLE `a` ENABLE KEYS */;
 
 -- 导出  表 exam.b 结构
@@ -133,30 +143,6 @@ INSERT INTO `c` (`num`, `timu`, `A`, `B`, `C`, `D`, `right`, `selectoin`, `grade
 	(20, 'word 具有的功能是____', '表格处理', '绘制图形', '自动更正', '以上三项都是', 'D', '', 5);
 /*!40000 ALTER TABLE `c` ENABLE KEYS */;
 
--- 导出  表 exam.stu+test 结构
-CREATE TABLE IF NOT EXISTS `stu+test` (
-  `sno` int(11) NOT NULL,
-  `testname` varchar(200) COLLATE utf8_bin NOT NULL,
-  `grade` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
--- 正在导出表  exam.stu+test 的数据：~0 rows (大约)
-/*!40000 ALTER TABLE `stu+test` DISABLE KEYS */;
-/*!40000 ALTER TABLE `stu+test` ENABLE KEYS */;
-
--- 导出  表 exam.student 结构
-CREATE TABLE IF NOT EXISTS `student` (
-  `sno` int(11) NOT NULL,
-  `name` varchar(200) COLLATE utf8_bin NOT NULL,
-  `password` varchar(200) COLLATE utf8_bin NOT NULL,
-  `dept` varchar(200) COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`sno`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
--- 正在导出表  exam.student 的数据：~0 rows (大约)
-/*!40000 ALTER TABLE `student` DISABLE KEYS */;
-/*!40000 ALTER TABLE `student` ENABLE KEYS */;
-
 -- 导出  表 exam.test 结构
 CREATE TABLE IF NOT EXISTS `test` (
   `testname` varchar(200) COLLATE utf8_bin NOT NULL,
@@ -170,6 +156,19 @@ INSERT INTO `test` (`testname`, `tapper`) VALUES
 	('B', '翼神龙'),
 	('C', '巨神兵');
 /*!40000 ALTER TABLE `test` ENABLE KEYS */;
+
+-- 导出  表 exam.username 结构
+CREATE TABLE IF NOT EXISTS `username` (
+  `sno` int(11) NOT NULL,
+  `name` varchar(200) COLLATE utf8_bin NOT NULL,
+  `password` varchar(200) COLLATE utf8_bin NOT NULL,
+  `dept` varchar(200) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`sno`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- 正在导出表  exam.username 的数据：~0 rows (大约)
+/*!40000 ALTER TABLE `username` DISABLE KEYS */;
+/*!40000 ALTER TABLE `username` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
