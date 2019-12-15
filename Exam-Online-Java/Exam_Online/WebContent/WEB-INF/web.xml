@@ -17,8 +17,33 @@
 
   <filter-mapping>
       <filter-name>EncodingFilter</filter-name>
-      <url-pattern>/*</url-pattern>
+      <url-pattern>/index.html</url-pattern>
   </filter-mapping>
+  <filter-mapping>
+      <filter-name>EncodingFilter</filter-name>
+      <url-pattern>/login</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+      <filter-name>EncodingFilter</filter-name>
+      <url-pattern>/login.html</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+      <filter-name>EncodingFilter</filter-name>
+      <url-pattern>/makeExam.html</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+      <filter-name>EncodingFilter</filter-name>
+      <url-pattern>/query_grade.html</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+      <filter-name>EncodingFilter</filter-name>
+      <url-pattern>/register.html</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+      <filter-name>EncodingFilter</filter-name>
+      <url-pattern>/userinfo.html</url-pattern>
+  </filter-mapping>
+  
   
   <filter>
       <filter-name>LoginFilter</filter-name>
@@ -29,17 +54,14 @@
       <filter-name>LoginFilter</filter-name>
       <url-pattern>/index.html</url-pattern>
   </filter-mapping>
-  
   <filter-mapping>
       <filter-name>LoginFilter</filter-name>
       <url-pattern>/makeExam.html</url-pattern>
   </filter-mapping>
-  
   <filter-mapping>
       <filter-name>LoginFilter</filter-name>
       <url-pattern>/userinfo.html</url-pattern>
   </filter-mapping>
-  
   <filter-mapping>
       <filter-name>LoginFilter</filter-name>
       <url-pattern>/query_grade.html</url-pattern>
@@ -66,13 +88,23 @@
   </servlet-mapping>
   
   <servlet>
+  	<servlet-name>IndexServlet</servlet-name>
+  	<servlet-class>com.project.servlet.IndexServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>IndexServlet</servlet-name>
+  	<url-pattern>/indexServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
   	<servlet-name>BeginExamServlet</servlet-name>
   	<servlet-class>com.project.servlet.BeginExamServlet</servlet-class>
   </servlet>
   
   <servlet-mapping>
   	<servlet-name>BeginExamServlet</servlet-name>
-  	<url-pattern>/begin_examServlet</url-pattern>
+  	<url-pattern>/begin</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -82,7 +114,7 @@
   
   <servlet-mapping>
   	<servlet-name>QueryServlet</servlet-name>
-  	<url-pattern>/queryGrade</url-pattern>
+  	<url-pattern>/queryServlet</url-pattern>
   </servlet-mapping>
   
   <servlet>

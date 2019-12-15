@@ -34,7 +34,7 @@
             <td>1</td>
             <td>试卷A</td>
             <td class="test_name">A</td>
-            <td><a href="#" class="begin" onclick="fun(this);">开始考试</a> </td>
+            <td><a href="makeExam.html" class="begin" onclick="fun(this);">开始考试</a> </td>
         </tr>
         <tr>
             <td>2</td>
@@ -100,7 +100,7 @@
     }
     $(".begin").click(function(){
         $.ajax({
-            url:"begin_examServlet",
+            url:"indexServlet",
             type:"post",
             data:{"test_name":name},
             success: function(data) {

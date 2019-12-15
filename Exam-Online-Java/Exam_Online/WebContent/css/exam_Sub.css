@@ -41,6 +41,16 @@
 	
 }
 
+.options{
+    padding: 0px;
+    list-style: none;
+}
+
+.option{
+    margin: 2px;
+    display: block;
+}
+
 label
 {
     font-size: 18px;
