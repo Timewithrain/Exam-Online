@@ -1,8 +1,13 @@
+body{
+    margin: 0 0;
+    padding: 0;
+	
+}
 #mydiv{
 	width: 100%;
 	margin: 0;/*去除标签默认的8像素*/
 	padding: 0;
-	background-color: #f4f4f4;
+    background-color: #f4f4f4;
 	position: absolute;
 }
 

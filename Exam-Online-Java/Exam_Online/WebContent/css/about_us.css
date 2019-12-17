@@ -2,8 +2,15 @@
 {
 	margin-left: 20px;
 	margin-top: 10px;
+	opacity: 0.9;
 }
 #top
 {
 	line-height: 100px;
+}
+.all{
+	
+    background-image: url(../img/b_img.jpeg);
+    background-repeat:no-repeat;
+	background-size: 100% 100%;  
 }

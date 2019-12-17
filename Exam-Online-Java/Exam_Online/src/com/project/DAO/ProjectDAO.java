@@ -108,6 +108,79 @@ public class ProjectDAO {
 		return new Paper(paperNum,topics);
 	}
 	
+	//根据用户名以及考试名写入考试成绩，若考试成绩已经存在则更新考试成绩
+	public void setUserGrade(String userName,String examName,int grade) {
+		int count = 0;
+		String sql = "select count(*) from usergrade where username=? and examname=?";
+		if(userName==null||examName==null) {
+			return;
+		}
+		try {
+			statement = connection.prepareStatement(sql);
+			statement.setString(1, userName);
+			statement.setString(2, examName);
+			ResultSet set = statement.executeQuery();
+			if(set.next()) {
+				count = Integer.parseInt(set.getString("count(*)"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if(count==0) {
+			addUserGrade(userName,examName,grade);
+		}else {
+			updateUserGrade(userName,examName,grade);
+		}
+	}
+	
+	//添加用户考试成绩
+	public void addUserGrade(String userName,String examName,int grade) {
+		String sql = "insert into usergrade values(?,?,?)";
+		try {
+			statement = connection.prepareStatement(sql);
+			statement.setString(1, userName);
+			statement.setString(2, examName);
+			statement.setInt(3, grade);
+			statement.execute();
+			connection.commit();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//更新用户考试成绩
+	public void updateUserGrade(String userName,String examName,int grade) {
+		String sql = "update usergrade set grade=? where username=? and examname=?";
+		try {
+			statement = connection.prepareStatement(sql);
+			statement.setInt(1, grade);
+			statement.setString(2, userName);
+			statement.setString(3, examName);
+			statement.execute();
+			connection.commit();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	//根据用户名以及试卷名获取用户成绩
+	public int getUserGrade(String userName,String examName) {
+		int grade = 0;
+		String sql = "select * from usergrade where username=? and examname=?";
+		try {
+			statement = connection.prepareStatement(sql);
+			statement.setString(1, userName);
+			statement.setString(2, examName);
+			ResultSet rs = statement.executeQuery();
+			while(rs.next()) {
+				grade = rs.getInt("grade");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return grade;
+	}
 	
 	public void close() {
 		try {
