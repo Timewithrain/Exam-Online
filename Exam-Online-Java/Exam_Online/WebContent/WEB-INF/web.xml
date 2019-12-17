@@ -101,11 +101,15 @@
   	<servlet-name>BeginExamServlet</servlet-name>
   	<servlet-class>com.project.servlet.BeginExamServlet</servlet-class>
   </servlet>
-  
   <servlet-mapping>
   	<servlet-name>BeginExamServlet</servlet-name>
   	<url-pattern>/begin</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BeginExamServlet</servlet-name>
+  	<url-pattern>/saveGrade</url-pattern>
+  </servlet-mapping>
+  
   
   <servlet>
   	<servlet-name>QueryServlet</servlet-name>
