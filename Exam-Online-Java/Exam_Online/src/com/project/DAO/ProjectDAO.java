@@ -167,7 +167,7 @@ public class ProjectDAO {
 	//根据用户名以及试卷名获取用户成绩
 	public int getUserGrade(String userName,String examName) {
 		int grade = 0;
-		String sql = "select * from user where username=? and examname=?";
+		String sql = "select * from usergrade where username=? and examname=?";
 		try {
 			statement = connection.prepareStatement(sql);
 			statement.setString(1, userName);

@@ -15,6 +15,7 @@ public class QueryServlet extends HttpServlet {
 	public void service(HttpServletRequest request,HttpServletResponse response) throws IOException {
 		String userName= request.getParameter("userName");
 		String examName = request.getParameter("test_paper_no");
+		System.out.println(userName);
 		System.out.println(examName);
 		ProjectDAO projectDAO = new ProjectDAO();
 		int grade= projectDAO.getUserGrade(userName, examName);

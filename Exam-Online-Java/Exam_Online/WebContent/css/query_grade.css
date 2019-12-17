@@ -2,7 +2,10 @@ html{
     width: 100%;   
     height: 100%;   
     overflow: hidden;   
-    font-style: sans-serif;   
+    font-style: sans-serif;
+    background-image: url(../img/b_img.jpeg);
+    background-repeat:no-repeat;
+	background-size: 100% 100%;     
 }   
 body{   
     width: 100%;   
@@ -17,14 +20,19 @@ body{
     margin: -150px 0 0 -150px;   
     width: 350px;   
     height: 250px;   
-    border: 1px solid black;
+    /* border: 1px solid rgb(216, 220, 228); */
     border-radius: 4px;
 }   
 #query_body h1{   
-    color: rgb(70, 66, 66);   
+    /* color: rgb(70, 66, 66);    */
+    /* color: rgb(216, 220, 228);
     text-shadow:0 0 10px;   
     letter-spacing: 1px;   
-    text-align: center;   
+    text-align: center;    */
+    color: #fff;   
+    text-shadow:0 0 10px;   
+    letter-spacing: 1px;   
+    text-align: center;
 }   
 h1{   
     font-size: 2em;   
@@ -45,14 +53,15 @@ input{
     border-right: 1px solid #312E3D;   
     border-bottom: 1px solid #56536A;   
     border-radius: 4px;   
-    background-color: #2D2D3F;   
+    background-color: #2D2D3F;
+    opacity:0.8;   
 }   
 .but{   
     width: 300px;   
     min-height: 20px;   
     display: block;   
-    background-color: rgb(34, 34, 48);     
-    border: 1px solid black;   
+    background-color: #4a77d4;   
+    border: 1px solid #3762bc;    
     color: rgb(240, 224, 224);   
     padding: 9px 14px;   
     font-size: 15px;   
@@ -60,4 +69,5 @@ input{
     border-radius: 5px;   
     margin: 0;  
     margin-left: 25px; 
+    opacity:0.9;
 }  
