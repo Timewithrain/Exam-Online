@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 		User user = projectDAO.getUser(username);
 		//判断用户是否存在
-		if(user!=null) {
+		if(user.getUsername()!=null) {
 			//判断密码是否输入正确
 			if(user.getPassword().equals(password)) {
 				//设置用户名以记录登陆状态
@@ -29,6 +29,9 @@ public class LoginServlet extends HttpServlet {
 			}else {
 				writer.println("用户名或密码错误，请重新登录！");
 			}
+		}else {
+			//用户不存在时跳转至注册页面
+			request.getRequestDispatcher("register.html").forward(request, response);
 		}
 		projectDAO.close();
 	}

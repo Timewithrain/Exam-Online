@@ -122,6 +122,16 @@
   </servlet-mapping>
   
   <servlet>
+  	<servlet-name>UserInfoServlet</servlet-name>
+  	<servlet-class>com.project.servlet.UserInforServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>UserInfoServlet</servlet-name>
+  	<url-pattern>/userinfoServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
   	<servlet-name>ExitServlet</servlet-name>
   	<servlet-class>com.project.servlet.ExitServlet</servlet-class>
   </servlet>
