@@ -4,54 +4,19 @@
     <meta charset="UTF-8">
     <title>个人信息</title>
     <link rel="stylesheet" href="css/userinfo.css">
-    <script src="jquery-1.12.4.js"></script>
+    <script src="js/jquery-1.12.4.js"></script>
     <script>
-   // $(function(){
-
-        //需要修改地址
-  //  $.ajax({
-       //     type: "POST"
-       //     url:"http://localhost:8080/homework/Order_get",
-      //    data:"userName="+userName,
-      //       success:function(data){
-       //     	 info = data;
-       //      },
-        //     dataType:json
-
-       //   })
-
-
-         $("#info").empty();
-
-         for(var i = 0;i < info.length;i++){
-            var $str = $("<tr></tr>");
-           $str.append("<th>"+info[i].sno+"</th>");//学号
-             $str.append("<th>"+info[i].name+"</th>");//名字
-            $str.append("<th>"+info[i].dept+"</th>");//学院
-          
-
-             $str.appendTo("#info");
-          };
-        
-     //})
      
-      	$.post("userinfoServlet", function(data) {
-    		var elem = eval(data);
-    		for(var i=0 ;i<=elem.length;i++){
-    	
-    			  $("#info").empty();
-
-    		         for(var i = 0;i < elem.length;i++){
-    		            var $str = $("<tr></tr>");
-    		           $str.append("<th>"+elem[i].sno+"</th>");//学号
-    		             $str.append("<th>"+elem[i].name+"</th>");//名字
-    		            $str.append("<th>"+elem[i].dept+"</th>");//学院
-    		          
-
-    		             $str.appendTo("#info");
-    		          };
-    		   
-    		}});
+    $.post("userinfoServlet",function(data) {
+      console.log(data);
+      var sno = data["sno"];
+      var userName = data["username"];
+      var dept = data["dept"];
+      console.log(sno+" "+userName+" "+dept);
+      $("#info").append('<th>'+sno+'</th>'+
+            '<th>'+userName+'</th>'+
+            '<th>'+dept+'</th>')
+    },"json");
 
     </script>
 </head>

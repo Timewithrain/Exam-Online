@@ -26,27 +26,37 @@ public class ProjectDAO {
 	}
 	
 	public User getUser(String name) {
+		String sno = null;
 		String username = null;
 		String password = null;
-		String sql = "select * from user where username=?";
+		String dept = null;
+		int age = 0;
+		String gender = null;
+		String email = null;
+		String sql = "select * from user where name=?";
 		try {
 			statement = connection.prepareStatement(sql);
 			statement.setString(1, name);
 			ResultSet rs = statement.executeQuery();
 			while(rs.next()) {
-				username = rs.getString("username");
+				sno = rs.getString("sno");
+				username = rs.getString("name");
 				password= rs.getString("password");
+				dept = rs.getString("dept");
+				age = rs.getInt("age");
+				gender = rs.getString("gender");
+				email = rs.getString("email");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return new User(username,password);
+		return new User(sno,username,password,dept,age,gender,email);
 	}
 	
 	public boolean isUserExists(String name) {
 		boolean isExist = false;
 		int count = 0;
-		String sql = "select count(*) from user where username = ?";
+		String sql = "select count(*) from user where name = ?";
 		try {
 			statement = connection.prepareStatement(sql);
 			statement.setString(1, name);
@@ -64,15 +74,19 @@ public class ProjectDAO {
 	}
 	
 	public void addUser(User user) {
-		String sql = "insert into user values(?,?,?)";
+		String sql = "insert into user values(?,?,?,?,?,?,?)";
 		if(user.getUsername()==null||user.getPassword()==null) {
 			return;
 		}
 		try {
 			statement = connection.prepareStatement(sql);
-			statement.setString(1, user.getUsername());
-			statement.setString(2, user.getPassword());
-			statement.setString(3, user.getEmail());
+			statement.setString(1, user.getSno());
+			statement.setString(2, user.getUsername());
+			statement.setString(3, user.getPassword());
+			statement.setString(4, user.getDept());
+			statement.setInt(5, user.getAge());
+			statement.setString(6, user.getGender());
+			statement.setString(7, user.getEmail());
 			statement.execute();
 			connection.commit();
 		} catch (SQLException e) {
