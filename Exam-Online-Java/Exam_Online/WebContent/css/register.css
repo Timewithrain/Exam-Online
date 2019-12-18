@@ -19,7 +19,7 @@ body{
     position: absolute;   
     top: 50%;   
     left:50%;   
-    margin: -150px 0 0 -150px;   
+    margin: -250px 0 0 -150px;   
     width: 300px;   
     height: 300px;   
 }   
@@ -50,6 +50,23 @@ input{
     background-color: #2D2D3F;   
     opacity:0.8; 
 }   
+select{   
+    width: 298px;   
+    height: 38px;   
+    margin-bottom: 10px;   
+    outline: none;   
+    padding: 10px;   
+    font-size: 13px;   
+    color:#fff; 
+    text-shadow:1px 1px 1px;   
+    border-top: 1px solid #312E3D;   
+    border-left: 1px solid #312E3D;   
+    border-right: 1px solid #312E3D;   
+    border-bottom: 1px solid #56536A;   
+    border-radius: 4px;   
+    background-color: #2D2D3F;   
+    opacity:0.8; 
+}  
 .but{   
     width: 300px;   
     min-height: 20px;   
