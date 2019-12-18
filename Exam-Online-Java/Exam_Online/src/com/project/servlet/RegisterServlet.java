@@ -12,16 +12,21 @@ import com.project.bean.User;
 
 public class RegisterServlet extends HttpServlet {
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String sno = request.getParameter("sno");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		String check_pwd = request.getParameter("check-password");
+		String dept = request.getParameter("dept");
+		String ageStr = request.getParameter("age");
+		int age = Integer.parseInt((ageStr==null?"0":ageStr));
+		String gender = request.getParameter("gender");
 		String email = request.getParameter("email");
+		String check_pwd = request.getParameter("check-password");
 		ProjectDAO projectDAO = new ProjectDAO();
 		//验证用户名密码不为空
 		if(username!=null&&password!=null) {
 			//验证两次输入的密码一致
 			if(password.equals(check_pwd)) {
-				projectDAO.addUser(new User(username,password,email));
+				projectDAO.addUser(new User(sno,username,password,dept,age,gender,email));
 				request.getRequestDispatcher("login.html").forward(request, response);
 			}else {
 				System.out.println(password);
