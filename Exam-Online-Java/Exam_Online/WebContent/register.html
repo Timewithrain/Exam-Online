@@ -10,8 +10,18 @@
     <div id="register">  
         <h1>Register</h1>
         <form action="register" method="post">
-            <input type="text" required="required" placeholder="设置邮箱" name="email"></input>
-            <input type="text" required="required" placeholder="设置用户名" name="username"></input>  
+            <input type="text" required="required" placeholder="设置用户名" name="name"></input>
+            <input type="number" required="required" placeholder="学号" name="sno"></input>
+            <input type="text" required="required" placeholder="学院" name="dept"></input>
+            <input type="number" min="0" step="1" placeholder="年龄" name="age"></input> 
+            <!--<input type="text" placeholder="性别" name="gender">-->
+                <select name="" id="">
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                    </option>
+                </select>
+            </input> 
+            <input type="text" placeholder="设置邮箱" name="email"></input>
             <input type="password" required="required" placeholder="设置密码" name="password"></input>  
             <input type="password" required="required" placeholder="确认密码" name="check-password"></input>
             <button class="but" type="submit">注册</button>
