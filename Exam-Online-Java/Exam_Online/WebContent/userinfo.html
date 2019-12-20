@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>个人信息</title>
     <link rel="stylesheet" href="css/userinfo.css">
+    <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery-1.12.4.js"></script>
     <script>
      
@@ -12,24 +13,44 @@
       var sno = data["sno"];
       var userName = data["username"];
       var dept = data["dept"];
-      console.log(sno+" "+userName+" "+dept);
+      var age =data["age"];
+      var gender =data["gender"];
+      var email =data["email"];
       $("#info").append('<th>'+sno+'</th>'+
             '<th>'+userName+'</th>'+
-            '<th>'+dept+'</th>')
+            '<th>'+dept+'</th>'+
+            '<th>'+age+'</th>'+
+            '<th>'+gender+'</th>'+
+            '<th>'+email+'</th>')
     },"json");
 
     </script>
 </head>
 <body>
+    <div id="top">
+        在线考试系统
+    </div>
+    <div class="nav">
+        <div class="center nav-c"><ul>
+            <li><a href="index.html">首页</a><>
+            <li><a href="userinfo.html">个人信息</a><>
+            <li><a href="query_grade.html">成绩查询</a><>
+            <li><a href="exit">退出系统</a><>
+            <li><a href="about_us.html">关于我们</a><>
+        </ul>
+        </div>
+    </div>
     <div class="center">
             <h3>您的身份信息</h3>
             <table>
             
             <thead>
-             <th>学号</th>
-            <th>用户名</th>
-            <th>学院</th>
-         
+                <th class="myth">学号</th>
+                <th class="myth">用户名</th>
+                <th class="myth">学院</th>
+                <th class="myth">年龄</th>
+                <th class="myth">性别</th>
+                <th class="myth">email</th>
             </thead>
             <tbody  id="info">
             

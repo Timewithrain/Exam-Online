@@ -7,6 +7,17 @@ body
 	color: rgb(216, 208, 208);
 }
 
+#mess{
+	color: black;
+}
+
+.myth{
+    height: 35px;
+	border: 1px solid rgb(216, 208, 208);
+	background-color: rgb(241, 240, 235);
+	color: black;
+}
+
 table{
 	border: 1px solid rgb(216, 208, 208);
 	width: 40%;

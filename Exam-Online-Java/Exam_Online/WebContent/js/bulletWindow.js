@@ -7,6 +7,7 @@ var success = document.querySelector(".success");
 //var mydi1 = document.querySelector(".exam-content");
 //var shelter =document.getElementById("mydiv");
 var ok1 = document.querySelector(".ok1");
+var ok2 = document.querySelector(".ok2");
 var cancel = document.querySelector(".cancel");
 			
 			
@@ -50,4 +51,12 @@ ok1.onclick = function(){
 	success.style.visibility = "visible";
 	success.style.top = "50%";
 	success.style.transition = "top 0s ease-in";
+}
+
+ok2.onclick = function(){
+	window.location.href='index.html';
+}
+
+span2.onclick = function(){
+	window.location.href='index.html';
 }

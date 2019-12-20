@@ -39,6 +39,10 @@ body{
 	background-color:#FFFFFF;
 }
 
+.options{
+    list-style: none;
+    padding: 0px;
+}
 
 .title
 {
