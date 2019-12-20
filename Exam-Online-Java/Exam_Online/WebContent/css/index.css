@@ -1,10 +1,14 @@
+body{
+	margin: 0px;
+}
+
 #top{
-	background-color: #4A374A;
+	background-color:#6a98b0;
 	height: 100px;
 	font-size: 70px;
-	font-style: italic;
 	padding-left: 40px;
 	color: white;
+	margin: 0;
 }
 
 ul{
@@ -12,11 +16,13 @@ ul{
 }
 a{
 	text-decoration: none;
+	color:#1b1b1a;
 }
 .nav{
 	height: 50px;
-	background-color: rgb(243, 233, 233);
+	background-color:#dbd6d0;
 	margin-top:-16px;
+	margin-left: -8px;
 }
 .nav .nav-c{
 	height: 50px;
@@ -24,7 +30,7 @@ a{
 .nav .nav-c li{
 	float: left;
 	height: 50px;
-	font:normal normal 18px/50px "微软雅黑";
+	font:normal normal 18px/50px "MingLiU_HKSCS-ExtB";
 	margin-right: 25px;
 }
 .nav .nav-c li a{
@@ -56,11 +62,11 @@ td{
 th{
 	border: 1px solid rgb(216, 208, 208);
 	height: 45px;
-	background-color: rgb(167, 157, 167);
+	background-color: #769eb6;
 }
 .odd{
-	background-color: rgb(185, 171, 185);
+	background-color: #a9bac1;
 }
 .even{
-	background-color: rgb(218, 205, 218);
+	background-color: #869fab;
 }

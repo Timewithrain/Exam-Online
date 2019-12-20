@@ -60,7 +60,9 @@
         $.post("saveGrade",{
             "grade":grade
         },function(){
-            alert("最终得分为：" + grade);
+            var a= document.querySelector(".finallyGrade");
+            a.innerHTML="<p>最终得分</p>"+"<em>"+grade+"</em>";
+            // alert("最终得分为：" + grade);
         },"json");
     }
 
