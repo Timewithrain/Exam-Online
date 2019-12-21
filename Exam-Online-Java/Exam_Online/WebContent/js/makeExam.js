@@ -57,11 +57,12 @@
                 grade = grade + 5;
             }
         }
+        // var a= document.querySelector(".finallyGrade");
+        // a.innerHTML="<p>最终得分:</p>"+"<em>"+grade+"</em>";
+        console.log("总分为："+grade);
         $.post("saveGrade",{
             "grade":grade
         },function(){
-            var a= document.querySelector(".finallyGrade");
-            a.innerHTML="<p>最终得分</p>"+"<em>"+grade+"</em>";
             // alert("最终得分为：" + grade);
         },"json");
     }

@@ -41,6 +41,10 @@
   </filter-mapping>
   <filter-mapping>
       <filter-name>EncodingFilter</filter-name>
+      <url-pattern>/register</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+      <filter-name>EncodingFilter</filter-name>
       <url-pattern>/userinfo.html</url-pattern>
   </filter-mapping>
   
