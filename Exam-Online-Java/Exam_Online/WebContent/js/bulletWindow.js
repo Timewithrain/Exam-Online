@@ -51,6 +51,7 @@ ok1.onclick = function(){
 	success.style.visibility = "visible";
 	success.style.top = "50%";
 	success.style.transition = "top 0s ease-in";
+	getGrade(userOptions,rightAnswers);
 }
 
 ok2.onclick = function(){

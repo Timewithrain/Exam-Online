@@ -13,7 +13,7 @@ import com.project.bean.User;
 public class RegisterServlet extends HttpServlet {
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String sno = request.getParameter("sno");
-		String username = request.getParameter("username");
+		String username = request.getParameter("name");
 		String password = request.getParameter("password");
 		String dept = request.getParameter("dept");
 		String ageStr = request.getParameter("age");
@@ -27,6 +27,7 @@ public class RegisterServlet extends HttpServlet {
 			//验证两次输入的密码一致
 			if(password.equals(check_pwd)) {
 				projectDAO.addUser(new User(sno,username,password,dept,age,gender,email));
+				projectDAO.close();
 				request.getRequestDispatcher("login.html").forward(request, response);
 			}else {
 				System.out.println(password);
@@ -36,6 +37,6 @@ public class RegisterServlet extends HttpServlet {
 		}else {
 			response.getWriter().println("<h3>注册失败，请重新注册!</h3>");
 		}
-		projectDAO.close();
+		
 	}
 }

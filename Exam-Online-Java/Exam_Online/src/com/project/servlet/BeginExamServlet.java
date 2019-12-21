@@ -46,6 +46,9 @@ public class BeginExamServlet extends HttpServlet {
 		String userName = (String) request.getSession().getAttribute("username");
 		String paperName = (String) request.getSession().getAttribute("paperName");
 		int grade = Integer.parseInt(request.getParameter("grade"));
+		System.out.println(userName);
+		System.out.println(paperName);
+		System.out.println(grade);
 		ProjectDAO projectDAO = new ProjectDAO();
 		projectDAO.setUserGrade(userName,paperName,grade);
 		ObjectMapper mapper = new ObjectMapper();
